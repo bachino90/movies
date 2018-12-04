@@ -12,9 +12,11 @@
 		38E4E90921B5FDEA006CC493 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38E4E90721B5FDEA006CC493 /* Main.storyboard */; };
 		38E4E90B21B5FDEC006CC493 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38E4E90A21B5FDEC006CC493 /* Assets.xcassets */; };
 		38E4E90E21B5FDEC006CC493 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38E4E90C21B5FDEC006CC493 /* LaunchScreen.storyboard */; };
+		A26B21EBBFAC7BC52688C831 /* Pods_rappmovie.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E46CD9DCBB1E787F2352A210 /* Pods_rappmovie.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1EE12B2FC22D87C7E4D573E2 /* Pods-rappmovie.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rappmovie.release.xcconfig"; path = "Pods/Target Support Files/Pods-rappmovie/Pods-rappmovie.release.xcconfig"; sourceTree = "<group>"; };
 		38E4E90021B5FDEA006CC493 /* rappmovie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = rappmovie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		38E4E90321B5FDEA006CC493 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		38E4E90521B5FDEA006CC493 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +24,8 @@
 		38E4E90A21B5FDEC006CC493 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		38E4E90D21B5FDEC006CC493 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		38E4E90F21B5FDEC006CC493 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6F87BB268D66C5854E1C957D /* Pods-rappmovie.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rappmovie.debug.xcconfig"; path = "Pods/Target Support Files/Pods-rappmovie/Pods-rappmovie.debug.xcconfig"; sourceTree = "<group>"; };
+		E46CD9DCBB1E787F2352A210 /* Pods_rappmovie.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_rappmovie.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A26B21EBBFAC7BC52688C831 /* Pods_rappmovie.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +45,8 @@
 			children = (
 				38E4E90221B5FDEA006CC493 /* rappmovie */,
 				38E4E90121B5FDEA006CC493 /* Products */,
+				A879EE833BDCC2F21C53A126 /* Pods */,
+				C291DE8B6A186EA888DEC29C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,6 +71,23 @@
 			path = rappmovie;
 			sourceTree = "<group>";
 		};
+		A879EE833BDCC2F21C53A126 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6F87BB268D66C5854E1C957D /* Pods-rappmovie.debug.xcconfig */,
+				1EE12B2FC22D87C7E4D573E2 /* Pods-rappmovie.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		C291DE8B6A186EA888DEC29C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E46CD9DCBB1E787F2352A210 /* Pods_rappmovie.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,9 +95,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 38E4E91221B5FDEC006CC493 /* Build configuration list for PBXNativeTarget "rappmovie" */;
 			buildPhases = (
+				58BB87D4B92EB650C5225171 /* [CP] Check Pods Manifest.lock */,
 				38E4E8FC21B5FDEA006CC493 /* Sources */,
 				38E4E8FD21B5FDEA006CC493 /* Frameworks */,
 				38E4E8FE21B5FDEA006CC493 /* Resources */,
+				110B16F5F96A7ECC233F8442 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -129,6 +155,51 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		110B16F5F96A7ECC233F8442 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-rappmovie/Pods-rappmovie-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/RxAtomic/RxAtomic.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAtomic.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-rappmovie/Pods-rappmovie-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		58BB87D4B92EB650C5225171 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-rappmovie-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		38E4E8FC21B5FDEA006CC493 /* Sources */ = {
@@ -280,6 +351,7 @@
 		};
 		38E4E91321B5FDEC006CC493 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6F87BB268D66C5854E1C957D /* Pods-rappmovie.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -298,6 +370,7 @@
 		};
 		38E4E91421B5FDEC006CC493 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1EE12B2FC22D87C7E4D573E2 /* Pods-rappmovie.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
