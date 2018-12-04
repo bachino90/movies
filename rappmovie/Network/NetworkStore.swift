@@ -13,9 +13,14 @@ import RxSwift
 
 internal let networkBackgroundQueue = DispatchQueue(label: "com.baxlabs.rappmovie.NetworkingCompletionQueue", attributes: [])
 
-class BaseStore {
+class NetworkStore {
 
-    let manager: Alamofire.SessionManager = Alamofire.SessionManager.default
+    lazy var manager: Alamofire.SessionManager = {
+        let configuration = URLSessionConfiguration.default
+        configuration.httpAdditionalHeaders = SessionManager.defaultHTTPHeaders
+        configuration.requestCachePolicy = .returnCacheDataElseLoad
+        return Alamofire.SessionManager(configuration: configuration)
+    }()
 
     func observableRequest<T: ResponseModel>(_ route: RouterRequest) -> Observable<T> {
         return Observable.create { [weak self] observer -> Disposable in
