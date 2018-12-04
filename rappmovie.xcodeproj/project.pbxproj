@@ -12,6 +12,12 @@
 		38E4E90921B5FDEA006CC493 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38E4E90721B5FDEA006CC493 /* Main.storyboard */; };
 		38E4E90B21B5FDEC006CC493 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38E4E90A21B5FDEC006CC493 /* Assets.xcassets */; };
 		38E4E90E21B5FDEC006CC493 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38E4E90C21B5FDEC006CC493 /* LaunchScreen.storyboard */; };
+		38E4E91A21B5FF44006CC493 /* NetworkStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E4E91921B5FF44006CC493 /* NetworkStore.swift */; };
+		38E4E91C21B5FF93006CC493 /* RouterRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E4E91B21B5FF93006CC493 /* RouterRequest.swift */; };
+		38E4E91E21B5FF9B006CC493 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E4E91D21B5FF9B006CC493 /* Router.swift */; };
+		38E4E92121B6002C006CC493 /* ResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E4E92021B6002C006CC493 /* ResponseModel.swift */; };
+		38E4E92321B60059006CC493 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E4E92221B60059006CC493 /* Model.swift */; };
+		38E4E92521B6015A006CC493 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E4E92421B6015A006CC493 /* NetworkError.swift */; };
 		A26B21EBBFAC7BC52688C831 /* Pods_rappmovie.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E46CD9DCBB1E787F2352A210 /* Pods_rappmovie.framework */; };
 /* End PBXBuildFile section */
 
@@ -24,6 +30,12 @@
 		38E4E90A21B5FDEC006CC493 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		38E4E90D21B5FDEC006CC493 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		38E4E90F21B5FDEC006CC493 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		38E4E91921B5FF44006CC493 /* NetworkStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkStore.swift; sourceTree = "<group>"; };
+		38E4E91B21B5FF93006CC493 /* RouterRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterRequest.swift; sourceTree = "<group>"; };
+		38E4E91D21B5FF9B006CC493 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		38E4E92021B6002C006CC493 /* ResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseModel.swift; sourceTree = "<group>"; };
+		38E4E92221B60059006CC493 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		38E4E92421B6015A006CC493 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		6F87BB268D66C5854E1C957D /* Pods-rappmovie.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rappmovie.debug.xcconfig"; path = "Pods/Target Support Files/Pods-rappmovie/Pods-rappmovie.debug.xcconfig"; sourceTree = "<group>"; };
 		E46CD9DCBB1E787F2352A210 /* Pods_rappmovie.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_rappmovie.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -78,6 +90,9 @@
 		38E4E91521B5FF02006CC493 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				38E4E91921B5FF44006CC493 /* NetworkStore.swift */,
+				38E4E91B21B5FF93006CC493 /* RouterRequest.swift */,
+				38E4E91D21B5FF9B006CC493 /* Router.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -92,6 +107,8 @@
 		38E4E91721B5FF13006CC493 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				38E4E91F21B6001B006CC493 /* Responses */,
+				38E4E92221B60059006CC493 /* Model.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -101,6 +118,15 @@
 			children = (
 			);
 			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		38E4E91F21B6001B006CC493 /* Responses */ = {
+			isa = PBXGroup;
+			children = (
+				38E4E92021B6002C006CC493 /* ResponseModel.swift */,
+				38E4E92421B6015A006CC493 /* NetworkError.swift */,
+			);
+			path = Responses;
 			sourceTree = "<group>";
 		};
 		A879EE833BDCC2F21C53A126 /* Pods */ = {
@@ -238,8 +264,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				38E4E92321B60059006CC493 /* Model.swift in Sources */,
+				38E4E92521B6015A006CC493 /* NetworkError.swift in Sources */,
+				38E4E91C21B5FF93006CC493 /* RouterRequest.swift in Sources */,
 				38E4E90621B5FDEA006CC493 /* ViewController.swift in Sources */,
+				38E4E91E21B5FF9B006CC493 /* Router.swift in Sources */,
 				38E4E90421B5FDEA006CC493 /* AppDelegate.swift in Sources */,
+				38E4E92121B6002C006CC493 /* ResponseModel.swift in Sources */,
+				38E4E91A21B5FF44006CC493 /* NetworkStore.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
