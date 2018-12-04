@@ -61,6 +61,10 @@
 		38E4E90221B5FDEA006CC493 /* rappmovie */ = {
 			isa = PBXGroup;
 			children = (
+				38E4E91821B5FF23006CC493 /* ViewControllers */,
+				38E4E91721B5FF13006CC493 /* Models */,
+				38E4E91621B5FF0C006CC493 /* CoreData */,
+				38E4E91521B5FF02006CC493 /* Network */,
 				38E4E90321B5FDEA006CC493 /* AppDelegate.swift */,
 				38E4E90521B5FDEA006CC493 /* ViewController.swift */,
 				38E4E90721B5FDEA006CC493 /* Main.storyboard */,
@@ -69,6 +73,34 @@
 				38E4E90F21B5FDEC006CC493 /* Info.plist */,
 			);
 			path = rappmovie;
+			sourceTree = "<group>";
+		};
+		38E4E91521B5FF02006CC493 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		38E4E91621B5FF0C006CC493 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		38E4E91721B5FF13006CC493 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		38E4E91821B5FF23006CC493 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 		A879EE833BDCC2F21C53A126 /* Pods */ = {
