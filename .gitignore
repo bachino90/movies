@@ -1,0 +1,6 @@
+.DS_Store
+stocker.xcodeproj/xcuserdata/
+stocker.xcworkspace/xcuserdata/
+DerivedData/
+Pods/
+Build/
