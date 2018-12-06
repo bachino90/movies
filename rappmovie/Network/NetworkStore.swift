@@ -22,7 +22,7 @@ class NetworkStore {
         return Alamofire.SessionManager(configuration: configuration)
     }()
 
-    func observableRequest<T: ResponseModel>(_ route: RouterRequest) -> Observable<T> {
+    func observableRequest<T: Model>(_ route: RouterRequest) -> Observable<T> {
         return Observable.create { [weak self] observer -> Disposable in
 
             let request = self?.request(route).response(queue: networkBackgroundQueue) { dataResponse in

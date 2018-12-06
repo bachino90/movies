@@ -35,18 +35,24 @@ class APIStore: NetworkStore {
     // Resources
 
     func getMovies(category: Media.Category, page: Int) -> Observable<(Media.Category, ListOfMovies)> {
-        let route = API.Resource(resource: .movie, category: category, page: page)
+        let route = API.ResourceList(resource: .movie, category: category, page: page)
         return observableRequest(route).map { (category, $0) }
     }
 
     func getTVShows(category: Media.Category, page: Int) -> Observable<(Media.Category, ListOfTVShows)> {
-        let route = API.Resource(resource: .tvShow, category: category, page: page)
+        let route = API.ResourceList(resource: .tvShow, category: category, page: page)
         return observableRequest(route).map { (category, $0) }
+    }
+
+    func getResource(_ resource: Media.Resource, byId id: Int) -> Observable<(Media, ListOfVideos)> {
+        let mediaObs: Observable<Media> = observableRequest(API.Resource(resource: resource, id: id))
+        let videoObs = getVideo(forResource: resource, forId: id)
+        return Observable.zip(mediaObs, videoObs) { ($0, $1) }
     }
 
     // Videos
 
-    func getVideo(resource: Media.Resource, for id: String) -> Observable<ListOfVideos> {
+    func getVideo(forResource resource: Media.Resource, forId id: Int) -> Observable<ListOfVideos> {
         return observableRequest(API.Video(resource: resource, id: id))
     }
 

@@ -16,7 +16,7 @@ class ListOfVideos: ResponseModel {
 
     required init?(_ json: JSON) {
         guard let id = json["id"].int,
-            let videosJson = json["videos"].array else { return nil }
+            let videosJson = json["results"].array else { return nil }
 
         self.id = id
         self.videos = videosJson.compactMap { Video($0) }

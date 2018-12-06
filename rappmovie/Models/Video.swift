@@ -11,12 +11,17 @@ import SwiftyJSON
 
 class Video: Model {
 
+    enum `Type`: String {
+        case trailer = "Trailer"
+        case teaser = "Teaser"
+    }
+
     let id: String
     let key: String
     let name: String
     let site: String
     let size: Int
-    let type: String
+    let type: Type
 
     required init?(_ json: JSON) {
         guard
@@ -25,7 +30,7 @@ class Video: Model {
             let name = json["name"].string,
             let site = json["site"].string,
             let size = json["size"].int,
-            let type = json["type"].string
+            let type = Type(rawValue: json["type"].stringValue)
             else { return nil }
 
         self.id = id

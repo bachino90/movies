@@ -9,23 +9,7 @@
 import Foundation
 import RxSwift
 
-class HomeViewModel {
-
-    // MARK: - StateViewModel State
-
-    enum State {
-        case initial
-        case loading
-        case error
-        case success([Section])
-    }
-
-    // MARK: - Public Properties
-
-    var state: Variable<State> = Variable(.initial)
-    var disposeBag = DisposeBag()
-
-    private let apiStore = APIStore()
+class HomeViewModel: StateViewModel {
 
     func fetchHome() {
         apiStore.homeObservable()

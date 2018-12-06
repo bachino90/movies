@@ -27,6 +27,8 @@
 		38392DE121B8B26C00634C94 /* MediaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38392DE021B8B26C00634C94 /* MediaViewController.swift */; };
 		38392DE321B8B27600634C94 /* MediaViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38392DE221B8B27600634C94 /* MediaViewController.xib */; };
 		38392DE521B8B2C300634C94 /* MediaViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38392DE421B8B2C300634C94 /* MediaViewModel.swift */; };
+		38392DE721B8C69200634C94 /* StateViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38392DE621B8C69200634C94 /* StateViewModel.swift */; };
+		38392DEA21B8C81200634C94 /* MediaDetailsSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38392DE921B8C81200634C94 /* MediaDetailsSection.swift */; };
 		38CB09AB21B7449B0023514B /* Media.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38CB09AA21B7449B0023514B /* Media.swift */; };
 		38CB09AD21B74AF50023514B /* APIStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38CB09AC21B74AF50023514B /* APIStore.swift */; };
 		38CB09AF21B75A310023514B /* ListOfMovies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38CB09AE21B75A310023514B /* ListOfMovies.swift */; };
@@ -74,6 +76,8 @@
 		38392DE021B8B26C00634C94 /* MediaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaViewController.swift; sourceTree = "<group>"; };
 		38392DE221B8B27600634C94 /* MediaViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MediaViewController.xib; sourceTree = "<group>"; };
 		38392DE421B8B2C300634C94 /* MediaViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaViewModel.swift; sourceTree = "<group>"; };
+		38392DE621B8C69200634C94 /* StateViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateViewModel.swift; sourceTree = "<group>"; };
+		38392DE921B8C81200634C94 /* MediaDetailsSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaDetailsSection.swift; sourceTree = "<group>"; };
 		38CB09AA21B7449B0023514B /* Media.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Media.swift; sourceTree = "<group>"; };
 		38CB09AC21B74AF50023514B /* APIStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIStore.swift; sourceTree = "<group>"; };
 		38CB09AE21B75A310023514B /* ListOfMovies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListOfMovies.swift; sourceTree = "<group>"; };
@@ -142,6 +146,7 @@
 			isa = PBXGroup;
 			children = (
 				38E4E92C21B62317006CC493 /* TableViewController.swift */,
+				38392DE621B8C69200634C94 /* StateViewModel.swift */,
 				38E4E92E21B62389006CC493 /* CellProtocols.swift */,
 				38E4E93021B62415006CC493 /* ReusableCell.swift */,
 				38392DD521B872F000634C94 /* CarrouselCell.swift */,
@@ -152,11 +157,20 @@
 		38392DDF21B8B22600634C94 /* MediaViewController */ = {
 			isa = PBXGroup;
 			children = (
+				38392DE821B8C80000634C94 /* Cells */,
 				38392DE021B8B26C00634C94 /* MediaViewController.swift */,
 				38392DE421B8B2C300634C94 /* MediaViewModel.swift */,
 				38392DE221B8B27600634C94 /* MediaViewController.xib */,
 			);
 			path = MediaViewController;
+			sourceTree = "<group>";
+		};
+		38392DE821B8C80000634C94 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				38392DE921B8C81200634C94 /* MediaDetailsSection.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		38E4E8F721B5FDEA006CC493 = {
@@ -424,6 +438,7 @@
 				38392DE521B8B2C300634C94 /* MediaViewModel.swift in Sources */,
 				38E4E91E21B5FF9B006CC493 /* Route.swift in Sources */,
 				38E4E92D21B62317006CC493 /* TableViewController.swift in Sources */,
+				38392DE721B8C69200634C94 /* StateViewModel.swift in Sources */,
 				38E4E92721B62293006CC493 /* HomeViewController.swift in Sources */,
 				38392DCB21B842F200634C94 /* MediaCarrouselRow.swift in Sources */,
 				38E4E92F21B62389006CC493 /* CellProtocols.swift in Sources */,
@@ -434,6 +449,7 @@
 				38CB09B321B76E490023514B /* HomeViewModel.swift in Sources */,
 				38392DD121B868C700634C94 /* MediaCollectionCell.swift in Sources */,
 				38E4E93121B62415006CC493 /* ReusableCell.swift in Sources */,
+				38392DEA21B8C81200634C94 /* MediaDetailsSection.swift in Sources */,
 				38CB09AB21B7449B0023514B /* Media.swift in Sources */,
 				38E4E91A21B5FF44006CC493 /* NetworkStore.swift in Sources */,
 				38E4E93921B6252A006CC493 /* Movie.swift in Sources */,

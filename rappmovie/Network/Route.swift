@@ -11,7 +11,7 @@ import Alamofire
 
 struct API {
 
-    struct Resource: RouterRequest {
+    struct ResourceList: RouterRequest {
         let resource: Media.Resource
         let category: Media.Category
         let page: Int
@@ -31,9 +31,16 @@ struct API {
         }
     }
 
+    struct Resource: RouterRequest {
+        let resource: Media.Resource
+        let id: Int
+
+        var path: String { return "\(resource.rawValue)/\(id)" }
+    }
+
     struct Video: RouterRequest {
         let resource: Media.Resource
-        let id: String
+        let id: Int
 
         var path: String { return "\(resource.rawValue)/\(id)/videos" }
     }

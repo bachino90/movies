@@ -25,12 +25,21 @@
                     <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </tableView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1da-yy-DGy">
+                    <rect key="frame" x="320" y="32" width="39" height="30"/>
+                    <state key="normal" title="Close"/>
+                    <connections>
+                        <action selector="close" destination="-1" eventType="touchUpInside" id="yeO-O7-fHl"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="aoX-Li-KMR" firstAttribute="top" secondItem="zPN-LS-btn" secondAttribute="top" id="9V6-Ns-uZg"/>
+                <constraint firstItem="1da-yy-DGy" firstAttribute="top" secondItem="zPN-LS-btn" secondAttribute="top" constant="12" id="Ho1-Lz-EbA"/>
                 <constraint firstItem="zPN-LS-btn" firstAttribute="bottom" secondItem="aoX-Li-KMR" secondAttribute="bottom" id="Ngv-ie-vUd"/>
                 <constraint firstItem="zPN-LS-btn" firstAttribute="trailing" secondItem="aoX-Li-KMR" secondAttribute="trailing" id="ahH-6j-kFi"/>
+                <constraint firstItem="zPN-LS-btn" firstAttribute="trailing" secondItem="1da-yy-DGy" secondAttribute="trailing" constant="16" id="eDZ-u8-FiV"/>
                 <constraint firstItem="aoX-Li-KMR" firstAttribute="leading" secondItem="zPN-LS-btn" secondAttribute="leading" id="hRW-7Y-MyW"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="zPN-LS-btn"/>

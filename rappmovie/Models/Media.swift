@@ -44,8 +44,7 @@ class Media: Model {
             let popularity = json["popularity"].float,
             let voteAverage = json["vote_average"].float,
             let originalLanguage = json["original_language"].string,
-            let voteCount = json["vote_count"].int,
-            let genreIdsArray = json["genre_ids"].array
+            let voteCount = json["vote_count"].int
         else { return nil }
 
         self.posterPath = json["poster_path"].string
@@ -57,7 +56,7 @@ class Media: Model {
         self.voteAverage = voteAverage
         self.originalLanguage = originalLanguage
         self.voteCount = voteCount
-        self.genreIds = genreIdsArray.map { $0.intValue }
+        self.genreIds = json["genre_ids"].arrayValue.compactMap { $0.int }
         self.originCountry = json["origin_country"].arrayValue.map { $0.stringValue }
         self.releaseDate = json["release_date"].string ?? json["first_air_date"].string
     }
