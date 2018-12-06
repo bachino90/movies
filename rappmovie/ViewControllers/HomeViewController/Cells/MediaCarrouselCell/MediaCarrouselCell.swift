@@ -13,6 +13,10 @@ class MediaCarrouselCell: CarrouselCell<MediaCollectionCell, Media>, TableViewCe
     @IBOutlet private var titleLabel: UILabel!
     
     static func cellHeight() -> CGFloat { return 200 }
+
+    func configure(category: Media.Category) {
+        titleLabel.text = category.rawValue
+    }
     
     override func configure(cell: inout MediaCollectionCell, forItem item: Media) {
         cell.configure(media: item)
