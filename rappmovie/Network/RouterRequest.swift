@@ -24,9 +24,9 @@ protocol RouterRequest: URLConvertible {
 
 extension RouterRequest {
 
-    var headers: [String: String]? { return nil }
+    var baseURLString: String { return "https://api.themoviedb.org/3/" }
 
-    var parameters: [String: Any]? { return nil }
+    var headers: [String: String]? { return nil }
 
     var encoding: Alamofire.ParameterEncoding { return URLEncoding.queryString }
 
@@ -35,4 +35,13 @@ extension RouterRequest {
     var method: Alamofire.HTTPMethod { return .get }
 
     func asURL() throws -> URL { return Foundation.URL(string: URLString.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed)!)! }
+
+    // FOR v4
+    // eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI0NzFhYzZlYTU3M2VhY2RhMDI5YWIwYTczMzgyZTNhNCIsInN1YiI6IjVjMDcwMzA2YzNhMzY4NjVkYzBkMWQ4YiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.7pg36ESJWyjRQKZcgltJ-AKkh6cXpASc8RSjzCYqMBo
+    var parameters: [String : Any]? {
+        return [
+            "api_key": "471ac6ea573eacda029ab0a73382e3a4",
+            "language": "en-US"
+        ]
+    }
 }

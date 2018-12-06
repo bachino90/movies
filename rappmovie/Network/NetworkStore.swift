@@ -26,12 +26,12 @@ class NetworkStore {
         return Observable.create { [weak self] observer -> Disposable in
 
             let request = self?.request(route).response(queue: networkBackgroundQueue) { dataResponse in
-//                debugPrint("----------------------------------------------------------------------------")
-//                debugPrint("---Request URL: ",dataResponse.request!.url!)
+                print("----------------------------------------------------------------------------")
+                print("---Request URL: ", dataResponse.request!.url!)
 //                debugPrint("---Request Headers URL: ",dataResponse.request!.allHTTPHeaderFields!)
 //                debugPrint("---Response URL: ",dataResponse.response!)
 //                debugPrint("---Response Headers URL: ",dataResponse.response!.allHeaderFields)
-//                debugPrint("----------------------------------------------------------------------------")
+                print("----------------------------------------------------------------------------")
 
                 if dataResponse.response?.statusCode == 302 {
                     observer.onError(NetworkError.unauthorize)
