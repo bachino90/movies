@@ -9,4 +9,5 @@ target 'rappmovie' do
   pod 'SwiftyJSON', '~> 4.2.0'
   pod 'RxSwift'
   pod 'Alamofire'
+  pod 'AlamofireImage', '~> 3.5'
 end
