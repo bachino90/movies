@@ -10,8 +10,9 @@ import Foundation
 
 class MediaSection: Section {
 
-    init(results: [Media.Category: ListOfMovies]) {
+    init(_ response: HomeResponse) {
         super.init()
-        rows = results.map { MediaCarrouselRow(mediaCollection: $1.movies) }
+        rows = response.movies.map { MediaCarrouselRow(mediaCollection: $1.movies) }
+        rows.append(contentsOf: response.tvShows.map { MediaCarrouselRow(mediaCollection: $1.tvShows) })
     }
 }

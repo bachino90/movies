@@ -11,6 +11,8 @@ import SwiftyJSON
 
 class TVShow: Media {
 
+    override var type: Resource { return .tvShow }
+
     required init?(_ json: JSON) {
         super.init(json)
     }

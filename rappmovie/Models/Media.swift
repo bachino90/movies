@@ -18,11 +18,12 @@ class Media: Model {
     }
 
     enum Resource: String {
-        case movies = "movie"
-        case tvShows = "tv"
+        case movie
+        case tvShow = "tv"
     }
 
     let id: Int
+    let title: String
     let posterPath: String?
     let popularity: Float
     let voteAverage: Float
@@ -31,11 +32,14 @@ class Media: Model {
     let voteCount: Int
     let genreIds: [Int]
     let originCountry: [String]
+    let releaseDate: String?
 
+    var type: Resource { return .movie }
 
     required init?(_ json: JSON) {
         guard
             let id = json["id"].int,
+            let title = json["title"].string ?? json["name"].string,
             let overview = json["overview"].string,
             let popularity = json["popularity"].float,
             let voteAverage = json["vote_average"].float,
@@ -47,6 +51,7 @@ class Media: Model {
         self.posterPath = json["poster_path"].string
 
         self.id = id
+        self.title = title
         self.overview = overview
         self.popularity = popularity
         self.voteAverage = voteAverage
@@ -54,6 +59,7 @@ class Media: Model {
         self.voteCount = voteCount
         self.genreIds = genreIdsArray.map { $0.intValue }
         self.originCountry = json["origin_country"].arrayValue.map { $0.stringValue }
+        self.releaseDate = json["release_date"].string ?? json["first_air_date"].string
     }
 
 }

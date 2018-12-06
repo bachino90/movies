@@ -35,12 +35,12 @@ class APIStore: NetworkStore {
     // Resources
 
     func getMovies(category: Media.Category, page: Int) -> Observable<(Media.Category, ListOfMovies)> {
-        let route = API.Resource(resource: .movies, category: category, page: page)
+        let route = API.Resource(resource: .movie, category: category, page: page)
         return observableRequest(route).map { (category, $0) }
     }
 
     func getTVShows(category: Media.Category, page: Int) -> Observable<(Media.Category, ListOfTVShows)> {
-        let route = API.Resource(resource: .tvShows, category: category, page: page)
+        let route = API.Resource(resource: .tvShow, category: category, page: page)
         return observableRequest(route).map { (category, $0) }
     }
 
@@ -53,12 +53,12 @@ class APIStore: NetworkStore {
     // Genres
 
     func getGenres() -> Observable<[Media.Resource: ListOfGenres]>  {
-        let movieGenres = getGenre(resource: .movies)
-        let tvShowGenres = getGenre(resource: .tvShows)
+        let movieGenres = getGenre(resource: .movie)
+        let tvShowGenres = getGenre(resource: .tvShow)
         return Observable.zip(movieGenres, tvShowGenres) {
             return [
-                Media.Resource.movies: $0,
-                Media.Resource.tvShows: $1
+                Media.Resource.movie: $0,
+                Media.Resource.tvShow: $1
             ]
         }
     }

@@ -31,7 +31,7 @@ class HomeViewModel {
         apiStore.homeObservable()
             .observeOn(MainScheduler.instance)
             .subscribe(onNext: { [weak self] response in
-                self?.state.value = .success([MediaSection(results: response.movies)])
+                self?.state.value = .success([MediaSection(response)])
             }, onError: { [weak self] _ in
                 self?.state.value = .error
             }).disposed(by: disposeBag)
