@@ -31,6 +31,7 @@ class Media: Model {
     let originalLanguage: String
     let voteCount: Int
     let genreIds: [Int]
+    let genres: [Genre]
     let originCountry: [String]
     let releaseDate: String?
 
@@ -56,6 +57,7 @@ class Media: Model {
         self.voteAverage = voteAverage
         self.originalLanguage = originalLanguage
         self.voteCount = voteCount
+        self.genres = json["genres"].arrayValue.compactMap { Genre($0) }
         self.genreIds = json["genre_ids"].arrayValue.compactMap { $0.int }
         self.originCountry = json["origin_country"].arrayValue.map { $0.stringValue }
         self.releaseDate = json["release_date"].string ?? json["first_air_date"].string

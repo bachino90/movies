@@ -58,15 +58,10 @@ class APIStore: NetworkStore {
 
     // Genres
 
-    func getGenres() -> Observable<[Media.Resource: ListOfGenres]>  {
-        let movieGenres = getGenre(resource: .movie)
-        let tvShowGenres = getGenre(resource: .tvShow)
-        return Observable.zip(movieGenres, tvShowGenres) {
-            return [
-                Media.Resource.movie: $0,
-                Media.Resource.tvShow: $1
-            ]
-        }
+    func getGenres() -> Observable<Set<Genre>>  {
+        let movieGenres = getGenre(resource: .movie).map { $0.genres }
+        let tvShowGenres = getGenre(resource: .tvShow).map { $0.genres }
+        return Observable.zip(movieGenres, tvShowGenres) { return Set($0 + $1) }
     }
 
     private func getGenre(resource: Media.Resource) -> Observable<ListOfGenres> {

@@ -9,7 +9,13 @@
 import Foundation
 import SwiftyJSON
 
-class Genre: Model {
+class Genre: Model, Hashable {
+
+    static func == (lhs: Genre, rhs: Genre) -> Bool {
+        return lhs.id == rhs.id
+    }
+
+    public var hashValue: Int { return id }
 
     let id: Int
     let name: String
