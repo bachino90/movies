@@ -50,6 +50,22 @@ struct API {
 
         var path: String { return "genre/\(resource.rawValue)/list" }
     }
+
+    struct Search: RouterRequest {
+        let query: String
+        let page: Int
+
+        var path: String { return "search/multi" }
+
+        var parameters: [String : Any]? {
+            return [
+                "api_key": "471ac6ea573eacda029ab0a73382e3a4",
+                "language": "en-US",
+                "query": query,
+                "page": page,
+            ]
+        }
+    }
 }
 
 
