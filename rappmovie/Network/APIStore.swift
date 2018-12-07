@@ -72,4 +72,10 @@ class APIStore: NetworkStore {
     private func getGenre(resource: Media.Resource) -> Observable<ListOfGenres> {
         return observableRequest(API.Genre(resource: resource))
     }
+
+    // Search
+
+    func search(query: String, page: Int) -> Observable<SearchResponse> {
+        return observableRequest(API.Search(query: query, page: page))
+    }
 }
