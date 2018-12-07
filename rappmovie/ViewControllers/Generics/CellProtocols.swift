@@ -17,7 +17,7 @@ class Action: NSObject {
 
 class PerformableAction: Action {
 
-    func performAction() { fatalError("notImplemented") }
+    func performAction() { }
 }
 
 func ==(lhs: Row, rhs: Row) -> Bool { return ObjectIdentifier(lhs) == ObjectIdentifier(rhs) } //Override

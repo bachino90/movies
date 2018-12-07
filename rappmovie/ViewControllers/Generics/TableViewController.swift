@@ -23,20 +23,20 @@ class TableViewController: UIViewController, UITableViewDelegate, UITableViewDat
     var results: [Section] = [] {
         didSet {
             results.forEach { $0.actionDelegate = self }
-            reloadActions()
+            reloadData()
         }
     }
 
-    func reloadActions() {
+    func reloadData() {
         tableView.reloadData()
     }
 
-    func actionForRowAtIndexPath(_ indexPath: IndexPath) -> Row {
-        let sectionAction = results[(indexPath as NSIndexPath).section]
-        return sectionAction.rows[(indexPath as NSIndexPath).row]
+    func rowAtIndexPath(_ indexPath: IndexPath) -> Row {
+        let section = results[(indexPath as NSIndexPath).section]
+        return section.rows[(indexPath as NSIndexPath).row]
     }
 
-    func indexPathForAction(_ action: Row) -> IndexPath? {
+    func indexPathFor(_ action: Row) -> IndexPath? {
         var sectionIndex = -1
         var rowIndex = -1
         for section in results {
@@ -73,9 +73,9 @@ class TableViewController: UIViewController, UITableViewDelegate, UITableViewDat
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let action = actionForRowAtIndexPath(indexPath)
-        if let cell = tableView.dequeueReusableCell(withIdentifier: action.cellIdentifier) {
-            action.configureCell(cell)
+        let row = rowAtIndexPath(indexPath)
+        if let cell = tableView.dequeueReusableCell(withIdentifier: row.cellIdentifier) {
+            row.configureCell(cell)
             return cell
         }
         return UITableViewCell()
@@ -85,13 +85,8 @@ class TableViewController: UIViewController, UITableViewDelegate, UITableViewDat
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: false)
-        let action = actionForRowAtIndexPath(indexPath)
-        action.performAction()
-    }
-
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        let action = actionForRowAtIndexPath(indexPath)
-        return action.cellHeight
+        let row = rowAtIndexPath(indexPath)
+        row.performAction()
     }
 
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
@@ -105,8 +100,8 @@ class TableViewController: UIViewController, UITableViewDelegate, UITableViewDat
     }
 
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        let action = results[section]
-        return action.headerHeight
+        let row = results[section]
+        return row.headerHeight
     }
 
     func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
@@ -114,7 +109,7 @@ class TableViewController: UIViewController, UITableViewDelegate, UITableViewDat
     }
 
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        let action = actionForRowAtIndexPath(indexPath)
-        action.willDisplayCell(cell)
+        let row = rowAtIndexPath(indexPath)
+        row.willDisplayCell(cell)
     }
 }
