@@ -14,8 +14,7 @@ class MediaCollectionCell: UICollectionViewCell {
     @IBOutlet private var imageView: UIImageView!
 
     func configure(media: Media) {
-        if let poster = media.posterPath,
-            let url = URL(string: "https://image.tmdb.org/t/p/w300/\(poster)") {
+        if let url = URL(string: "https://image.tmdb.org/t/p/w300/\(media.posterPath)") {
             imageView.af_setImage(withURL: url)
         }
     }

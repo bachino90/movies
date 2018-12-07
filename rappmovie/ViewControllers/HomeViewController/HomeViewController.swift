@@ -24,6 +24,9 @@ class HomeViewController: TableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        view.backgroundColor = Styler.Color.darkGray
+        tableView.backgroundColor = Styler.Color.darkGray
+        
         tableView.register(MediaCarrouselCell.self)
 
         let _ = viewModel.state.asObservable()
@@ -44,6 +47,16 @@ class HomeViewController: TableViewController {
         case .success(let sections):
             self.results = sections
         }
+    }
+
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        let row = rowAtIndexPath(indexPath)
+        return row.cellHeight
+    }
+
+    @IBAction func openSearch() {
+        let vc = SearchViewController()
+        present(vc, animated: true)
     }
 }
 

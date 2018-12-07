@@ -10,17 +10,19 @@ import UIKit
 
 class MediaCarrouselRow: GenericRow<MediaCarrouselCell> {
 
+    let resource: Media.Resource
     let category: Media.Category
     let mediaCollection: [Media]
 
-    init(mediaCollection: [Media], category: Media.Category) {
+    init(mediaCollection: [Media], category: Media.Category, resource: Media.Resource) {
+        self.resource = resource
         self.category = category
         self.mediaCollection = mediaCollection
     }
 
     override func configureReusableCell(_ cell: MediaCarrouselCell) {
         cell.list = mediaCollection
-        cell.configure(category: category)
+        cell.configure(resource: resource, category: category)
         cell.onSelectItem = { [weak self] media in
             self?.delegate?.rowDidRequestToOpen(media: media)
         }

@@ -12,10 +12,18 @@ class MediaCarrouselCell: CarrouselCell<MediaCollectionCell, Media>, TableViewCe
 
     @IBOutlet private var titleLabel: UILabel!
     
-    static func cellHeight() -> CGFloat { return 200 }
+    static func cellHeight() -> CGFloat { return 190 }
 
-    func configure(category: Media.Category) {
-        titleLabel.text = category.rawValue
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        titleLabel.font = UIFont.appBoldFontWith(size: 14)
+        titleLabel.textColor = Styler.Color.darkWhite
+        collectionView.backgroundColor = Styler.Color.darkGray
+        backgroundColor = Styler.Color.darkGray
+    }
+
+    func configure(resource: Media.Resource, category: Media.Category) {
+        titleLabel.text = category.title
     }
     
     override func configure(cell: inout MediaCollectionCell, forItem item: Media) {

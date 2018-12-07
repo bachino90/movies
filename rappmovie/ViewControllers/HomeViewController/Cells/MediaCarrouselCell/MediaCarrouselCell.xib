@@ -11,21 +11,21 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" rowHeight="145" id="3Rg-Me-xn0" customClass="MediaCarrouselCell" customModule="rappmovie" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="375" height="145"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" rowHeight="200" id="3Rg-Me-xn0" customClass="MediaCarrouselCell" customModule="rappmovie" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="3Rg-Me-xn0" id="XtT-3j-8Pe">
-                <rect key="frame" x="0.0" y="0.0" width="375" height="144.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="375" height="199.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mv6-ue-X7T">
-                        <rect key="frame" x="16" y="8" width="42" height="21"/>
+                        <rect key="frame" x="16" y="12" width="42" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="Krf-cr-uPu">
-                        <rect key="frame" x="0.0" y="37" width="375" height="107.5"/>
+                        <rect key="frame" x="0.0" y="35" width="375" height="164.5"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="PCz-bs-ppO">
                             <size key="itemSize" width="50" height="50"/>
@@ -37,9 +37,9 @@
                 </subviews>
                 <constraints>
                     <constraint firstAttribute="trailing" secondItem="Krf-cr-uPu" secondAttribute="trailing" id="F8f-yD-IdN"/>
-                    <constraint firstItem="Krf-cr-uPu" firstAttribute="top" secondItem="mv6-ue-X7T" secondAttribute="bottom" constant="8" id="Lex-e2-2zk"/>
+                    <constraint firstItem="Krf-cr-uPu" firstAttribute="top" secondItem="mv6-ue-X7T" secondAttribute="bottom" constant="2" id="Lex-e2-2zk"/>
                     <constraint firstAttribute="bottom" secondItem="Krf-cr-uPu" secondAttribute="bottom" id="ebU-Xs-fni"/>
-                    <constraint firstItem="mv6-ue-X7T" firstAttribute="top" secondItem="XtT-3j-8Pe" secondAttribute="top" constant="8" id="hxH-X3-gAP"/>
+                    <constraint firstItem="mv6-ue-X7T" firstAttribute="top" secondItem="XtT-3j-8Pe" secondAttribute="top" constant="12" id="hxH-X3-gAP"/>
                     <constraint firstItem="mv6-ue-X7T" firstAttribute="leading" secondItem="XtT-3j-8Pe" secondAttribute="leading" constant="16" id="kJZ-Ne-T84"/>
                     <constraint firstItem="Krf-cr-uPu" firstAttribute="leading" secondItem="XtT-3j-8Pe" secondAttribute="leading" id="uIZ-DC-5A7"/>
                 </constraints>
