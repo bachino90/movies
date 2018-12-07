@@ -18,6 +18,7 @@ class MediaViewModel: StateViewModel {
     }
 
     func getDetails() {
+        state.value = .success([MediaDetailsSection(media)])
         apiStore.getResource(media.type, byId: media.id)
             .observeOn(MainScheduler.instance)
             .subscribe(onNext: { [weak self] response in

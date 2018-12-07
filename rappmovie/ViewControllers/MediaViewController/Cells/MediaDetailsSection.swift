@@ -12,5 +12,9 @@ class MediaDetailsSection: Section {
 
     init(_ media: Media) {
         super.init()
+        rows = [
+            MediaHeaderRow(media: media),
+            MediaOverviewRow(overview: media.overview)
+        ]
     }
 }

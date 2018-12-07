@@ -45,9 +45,14 @@ class APIStore: NetworkStore {
     }
 
     func getResource(_ resource: Media.Resource, byId id: Int) -> Observable<(Media, ListOfVideos)> {
-        let mediaObs: Observable<Media> = observableRequest(API.Resource(resource: resource, id: id))
         let videoObs = getVideo(forResource: resource, forId: id)
-        return Observable.zip(mediaObs, videoObs) { ($0, $1) }
+        if resource == .movie {
+            let mediaObs: Observable<Movie> = observableRequest(API.Resource(resource: resource, id: id))
+            return Observable.zip(mediaObs, videoObs) { ($0, $1) }
+        } else {
+            let mediaObs: Observable<TVShow> = observableRequest(API.Resource(resource: resource, id: id))
+            return Observable.zip(mediaObs, videoObs) { ($0, $1) }
+        }
     }
 
     // Videos

@@ -21,8 +21,8 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="aoX-Li-KMR">
-                    <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" contentViewInsetsToSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aoX-Li-KMR">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </tableView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1da-yy-DGy">
@@ -35,7 +35,7 @@
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
-                <constraint firstItem="aoX-Li-KMR" firstAttribute="top" secondItem="zPN-LS-btn" secondAttribute="top" id="9V6-Ns-uZg"/>
+                <constraint firstItem="aoX-Li-KMR" firstAttribute="top" secondItem="3h3-vl-wMM" secondAttribute="top" id="9V6-Ns-uZg"/>
                 <constraint firstItem="1da-yy-DGy" firstAttribute="top" secondItem="zPN-LS-btn" secondAttribute="top" constant="12" id="Ho1-Lz-EbA"/>
                 <constraint firstItem="zPN-LS-btn" firstAttribute="bottom" secondItem="aoX-Li-KMR" secondAttribute="bottom" id="Ngv-ie-vUd"/>
                 <constraint firstItem="zPN-LS-btn" firstAttribute="trailing" secondItem="aoX-Li-KMR" secondAttribute="trailing" id="ahH-6j-kFi"/>

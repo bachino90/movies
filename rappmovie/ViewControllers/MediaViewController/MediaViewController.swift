@@ -25,6 +25,12 @@ class MediaViewController: TableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        view.backgroundColor = Styler.Color.darkGray
+        tableView.backgroundColor = Styler.Color.darkGray
+
+        tableView.register(MediaHeaderCell.self)
+        tableView.register(MediaOverviewCell.self)
+
         let _ = viewModel.state.asObservable()
             .observeOn(MainScheduler.instance)
             .subscribe(onNext: { [weak self] state in
