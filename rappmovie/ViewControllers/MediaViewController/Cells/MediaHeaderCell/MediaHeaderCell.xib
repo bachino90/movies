@@ -11,16 +11,15 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" rowHeight="303" id="yf9-au-TwC" customClass="MediaHeaderCell" customModule="rappmovie" customModuleProvider="target">
+        <tableViewCell contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" rowHeight="303" id="yf9-au-TwC" customClass="MediaHeaderCell" customModule="rappmovie" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="375" height="303"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="yf9-au-TwC" id="LZE-pO-cIw">
                 <rect key="frame" x="0.0" y="0.0" width="375" height="302.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="N8H-CS-sW5">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="303"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="N8H-CS-sW5">
+                        <rect key="frame" x="0.0" y="-80" width="375" height="382.5"/>
                     </imageView>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EzS-cp-vdI" customClass="GradientView" customModule="rappmovie" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="222.5" width="375" height="80"/>
@@ -53,12 +52,16 @@
                 </subviews>
                 <constraints>
                     <constraint firstItem="W73-gI-r0C" firstAttribute="centerX" secondItem="LZE-pO-cIw" secondAttribute="centerX" id="AYb-3r-OOi"/>
+                    <constraint firstAttribute="bottom" secondItem="N8H-CS-sW5" secondAttribute="bottom" id="Aud-g2-Xuv"/>
                     <constraint firstItem="FJc-xs-pVk" firstAttribute="top" secondItem="LZE-pO-cIw" secondAttribute="topMargin" constant="12" id="EPf-iI-FUP"/>
                     <constraint firstItem="FJc-xs-pVk" firstAttribute="centerX" secondItem="LZE-pO-cIw" secondAttribute="centerX" id="Em1-q4-1Lq"/>
+                    <constraint firstAttribute="trailing" secondItem="N8H-CS-sW5" secondAttribute="trailing" id="IpP-Uo-CaS"/>
                     <constraint firstItem="EzS-cp-vdI" firstAttribute="leading" secondItem="LZE-pO-cIw" secondAttribute="leading" id="OZz-9r-AIn"/>
                     <constraint firstAttribute="bottom" secondItem="EzS-cp-vdI" secondAttribute="bottom" id="Y53-oc-Zcr"/>
                     <constraint firstItem="W73-gI-r0C" firstAttribute="top" secondItem="FJc-xs-pVk" secondAttribute="bottom" constant="12" id="fFr-kp-wWc"/>
+                    <constraint firstItem="N8H-CS-sW5" firstAttribute="leading" secondItem="LZE-pO-cIw" secondAttribute="leading" id="gex-ps-qtj"/>
                     <constraint firstAttribute="bottomMargin" secondItem="W73-gI-r0C" secondAttribute="bottom" constant="12" id="k0P-4l-2QO"/>
+                    <constraint firstItem="N8H-CS-sW5" firstAttribute="top" secondItem="LZE-pO-cIw" secondAttribute="top" constant="-80" id="u5x-Da-nY0"/>
                     <constraint firstAttribute="trailing" secondItem="EzS-cp-vdI" secondAttribute="trailing" id="v45-6S-JvB"/>
                 </constraints>
             </tableViewCellContentView>

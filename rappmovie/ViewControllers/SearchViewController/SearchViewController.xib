@@ -14,6 +14,7 @@
             <connections>
                 <outlet property="collectionView" destination="kc4-GR-WFf" id="Rzo-we-8nS"/>
                 <outlet property="searchTextField" destination="TgT-SN-crz" id="OsQ-GM-6KL"/>
+                <outlet property="searchView" destination="GNg-S7-exm" id="qJc-1z-b3h"/>
                 <outlet property="view" destination="Y2r-aU-K4E" id="V8E-9x-IN0"/>
             </connections>
         </placeholder>
@@ -22,6 +23,16 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
+                <collectionView multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="kc4-GR-WFf">
+                    <rect key="frame" x="0.0" y="70" width="375" height="597"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="nQw-VN-Fjd">
+                        <size key="itemSize" width="50" height="50"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GNg-S7-exm">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="70"/>
                     <subviews>
@@ -38,7 +49,7 @@
                                         <action selector="dismiss" destination="-1" eventType="touchUpInside" id="Pzm-Eb-bSF"/>
                                     </connections>
                                 </button>
-                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TgT-SN-crz">
+                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="16" translatesAutoresizingMaskIntoConstraints="NO" id="TgT-SN-crz">
                                     <rect key="frame" x="12" y="9" width="281" height="32"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="32" id="eeI-A6-9GJ"/>
@@ -67,16 +78,6 @@
                         <constraint firstItem="J9F-7B-uFv" firstAttribute="leading" secondItem="GNg-S7-exm" secondAttribute="leading" id="gFn-VK-Udw"/>
                     </constraints>
                 </view>
-                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="kc4-GR-WFf">
-                    <rect key="frame" x="0.0" y="70" width="375" height="597"/>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="nQw-VN-Fjd">
-                        <size key="itemSize" width="50" height="50"/>
-                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                    </collectionViewFlowLayout>
-                </collectionView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>

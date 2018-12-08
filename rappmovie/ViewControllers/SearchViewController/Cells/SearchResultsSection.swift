@@ -10,8 +10,11 @@ import Foundation
 
 class SearchResultsSection: Section {
 
-    init(listOfMedia: [Media]) {
+    init(listOfMedia: [Media], loadMore: Bool) {
         super.init()
         rows = listOfMedia.map { MediaRow(media: $0) }
+        if loadMore {
+            rows.append(LoadingCollectionRow())
+        }
     }
 }

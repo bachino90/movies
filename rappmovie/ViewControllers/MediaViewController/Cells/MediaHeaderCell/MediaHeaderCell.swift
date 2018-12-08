@@ -19,6 +19,7 @@ class MediaHeaderCell: UITableViewCell, TableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         subtitleLabel.textColor = Styler.Color.darkWhite
+        backgroundImageView.addBlurEffect(style: .dark)
     }
 
     func configure(media: Media) {
@@ -26,12 +27,6 @@ class MediaHeaderCell: UITableViewCell, TableViewCell {
             posterImageView.af_setImage(withURL: posterUrl)
             backgroundImageView.af_setImage(withURL: posterUrl)
         }
-
-        let darkBlur = UIBlurEffect(style: UIBlurEffect.Style.dark)
-        let blurView = UIVisualEffectView(effect: darkBlur)
-        blurView.frame = backgroundImageView.bounds
-        blurView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-        backgroundImageView.addSubview(blurView)
 
         var subtitles: [String] = []
 

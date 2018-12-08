@@ -79,22 +79,3 @@ class CollectionViewController: UIViewController, UICollectionViewDelegate, UICo
         row.willDisplayCell(cell)
     }
 }
-
-//extension CollectionViewController: UICollectionViewDelegateFlowLayout {
-//
-//    func collectionView(_ collectionView: UICollectionView,
-//                        layout collectionViewLayout: UICollectionViewLayout,
-//                        sizeForItemAt indexPath: IndexPath) -> CGSize {
-//        let row = rowAtIndexPath(indexPath)
-//        return row.cellSizeForViewFrame(collectionView.frame) ?? CGSize.zero
-//    }
-//
-//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-//        return results[section].sectionInsets
-//    }
-//
-//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-//        return results[section].lineSpacing
-//    }
-//
-//}

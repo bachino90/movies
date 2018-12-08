@@ -11,18 +11,30 @@ import RxSwift
 
 class SearchViewModel: StateViewModel {
 
-    var disposable: Disposable?
-    var page = 1
+    private var disposable: Disposable?
+    private var page = 1
 
     func search(query: String?) {
-        guard let query = query else { return }
+        guard let query = query, query.count > 1 else {
+            state.value = .success([])
+            return
+        }
         disposable?.dispose()
         disposable = apiStore.search(query: query, page: page)
             .observeOn(MainScheduler.instance)
             .subscribe(onNext: { [weak self] response in
-                self?.state.value = .success([SearchResultsSection(listOfMedia: response.results)])
+                let loadMore = response.page < response.totalPages
+                self?.state.value = .success([SearchResultsSection(listOfMedia: response.results, loadMore: loadMore)])
                 }, onError: { [weak self] _ in
                     self?.state.value = .error
             })
+    }
+
+    func loadMore() {
+        page += 1
+    }
+
+    func resetPage() {
+        page = 1
     }
 }

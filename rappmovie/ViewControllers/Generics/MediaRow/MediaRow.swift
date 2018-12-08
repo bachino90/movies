@@ -23,4 +23,16 @@ class MediaRow: Row {
             cell.configure(media: media)
         }
     }
+
+    override func performAction() {
+        delegate?.actionDidRequesToOpen(media: media)
+    }
+
+    fileprivate var delegate: MediaRowDelegate? {
+        return actionDelegate as? MediaRowDelegate
+    }
+}
+
+protocol MediaRowDelegate: ActionDelegate {
+    func actionDidRequesToOpen(media: Media)
 }
