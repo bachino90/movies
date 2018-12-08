@@ -19,13 +19,13 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="N8H-CS-sW5">
-                        <rect key="frame" x="0.0" y="-80" width="375" height="382.5"/>
+                        <rect key="frame" x="0.0" y="-200" width="375" height="502.5"/>
                     </imageView>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EzS-cp-vdI" customClass="GradientView" customModule="rappmovie" customModuleProvider="target">
-                        <rect key="frame" x="0.0" y="222.5" width="375" height="80"/>
+                        <rect key="frame" x="0.0" y="257.5" width="375" height="45"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="80" id="HAh-Cq-Xue"/>
+                            <constraint firstAttribute="height" constant="45" id="HAh-Cq-Xue"/>
                         </constraints>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="color" keyPath="startColor">
@@ -61,7 +61,7 @@
                     <constraint firstItem="W73-gI-r0C" firstAttribute="top" secondItem="FJc-xs-pVk" secondAttribute="bottom" constant="12" id="fFr-kp-wWc"/>
                     <constraint firstItem="N8H-CS-sW5" firstAttribute="leading" secondItem="LZE-pO-cIw" secondAttribute="leading" id="gex-ps-qtj"/>
                     <constraint firstAttribute="bottomMargin" secondItem="W73-gI-r0C" secondAttribute="bottom" constant="12" id="k0P-4l-2QO"/>
-                    <constraint firstItem="N8H-CS-sW5" firstAttribute="top" secondItem="LZE-pO-cIw" secondAttribute="top" constant="-80" id="u5x-Da-nY0"/>
+                    <constraint firstItem="N8H-CS-sW5" firstAttribute="top" secondItem="LZE-pO-cIw" secondAttribute="top" constant="-200" id="u5x-Da-nY0"/>
                     <constraint firstAttribute="trailing" secondItem="EzS-cp-vdI" secondAttribute="trailing" id="v45-6S-JvB"/>
                 </constraints>
             </tableViewCellContentView>
