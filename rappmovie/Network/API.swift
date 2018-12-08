@@ -11,6 +11,9 @@ import Alamofire
 
 struct API {
 
+    static let key = "471ac6ea573eacda029ab0a73382e3a4"
+    static var locale: String { return Locale.preferredLanguages.first ?? "en-US" }
+
     struct ResourceList: RouterRequest {
         let resource: Media.Resource
         let category: Media.Category
@@ -24,8 +27,8 @@ struct API {
         // eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI0NzFhYzZlYTU3M2VhY2RhMDI5YWIwYTczMzgyZTNhNCIsInN1YiI6IjVjMDcwMzA2YzNhMzY4NjVkYzBkMWQ4YiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.7pg36ESJWyjRQKZcgltJ-AKkh6cXpASc8RSjzCYqMBo
         var parameters: [String : Any]? {
             return [
-                "api_key": "471ac6ea573eacda029ab0a73382e3a4",
-                "language": "en-US",
+                "api_key": API.key,
+                "language": API.locale,
                 "page": page,
             ]
         }
@@ -59,8 +62,8 @@ struct API {
 
         var parameters: [String : Any]? {
             return [
-                "api_key": "471ac6ea573eacda029ab0a73382e3a4",
-                "language": "en-US",
+                "api_key": API.key,
+                "language": API.locale,
                 "query": query,
                 "page": page,
             ]

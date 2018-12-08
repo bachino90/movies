@@ -14,9 +14,13 @@ class DateUtils {
 
     static let yearFormat = "yyyy"
     static let releaseDateFormat = "yyyy-MM-dd"
+    static let monthFormat = "MMM"
 
     private var allFormatters = [String : DateFormatter]()
 
+    lazy var monthDateFormatter: DateFormatter = {
+        return self.dateFormatterWithPattern(DateUtils.monthFormat)
+    }()
 
     lazy var yearDateFormatter: DateFormatter = {
         return self.dateFormatterWithPattern(DateUtils.yearFormat)

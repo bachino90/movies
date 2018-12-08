@@ -38,5 +38,6 @@ struct Styler {
         static let lightGray = UIColor(red: 238/255.0, green: 238/255.0, blue: 238/255.0, alpha: 1.0)
         static let darkWhite = UIColor(red: 244/255.0, green: 244/255.0, blue: 244/255.0, alpha: 1.0)
         static let lightWhite = UIColor(red: 250/255.0, green: 250/255.0, blue: 250/255.0, alpha: 1.0)
+        static let red = UIColor.red
     }
 }

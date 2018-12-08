@@ -22,18 +22,42 @@
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ccA-vJ-Kmj">
                         <rect key="frame" x="0.0" y="0.0" width="130" height="88"/>
                     </imageView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ukP-U8-Hkv">
+                        <rect key="frame" x="-5" y="8" width="55" height="20"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KFG-qb-2Pn">
+                                <rect key="frame" x="10" y="0.0" width="45" height="20"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="KFG-qb-2Pn" secondAttribute="bottom" id="5dA-mt-uXN"/>
+                            <constraint firstItem="KFG-qb-2Pn" firstAttribute="top" secondItem="ukP-U8-Hkv" secondAttribute="top" id="CZO-gI-fcP"/>
+                            <constraint firstAttribute="trailing" secondItem="KFG-qb-2Pn" secondAttribute="trailing" id="NjV-6a-jag"/>
+                            <constraint firstAttribute="height" constant="20" id="fkC-vJ-cyl"/>
+                            <constraint firstAttribute="width" constant="55" id="hhk-zl-NN2"/>
+                            <constraint firstItem="KFG-qb-2Pn" firstAttribute="leading" secondItem="ukP-U8-Hkv" secondAttribute="leading" constant="10" id="wyY-MI-UX6"/>
+                        </constraints>
+                    </view>
                 </subviews>
             </view>
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="ccA-vJ-Kmj" secondAttribute="trailing" id="3hd-4i-lWl"/>
+                <constraint firstItem="ukP-U8-Hkv" firstAttribute="top" secondItem="eqm-co-z3n" secondAttribute="top" constant="8" id="Ggr-nB-zL3"/>
                 <constraint firstAttribute="bottom" secondItem="ccA-vJ-Kmj" secondAttribute="bottom" id="Mf1-z6-EqZ"/>
                 <constraint firstItem="ccA-vJ-Kmj" firstAttribute="leading" secondItem="eqm-co-z3n" secondAttribute="leading" id="UWY-1U-weg"/>
                 <constraint firstItem="ccA-vJ-Kmj" firstAttribute="top" secondItem="eqm-co-z3n" secondAttribute="top" id="glg-EH-BHe"/>
+                <constraint firstItem="ukP-U8-Hkv" firstAttribute="leading" secondItem="eqm-co-z3n" secondAttribute="leading" constant="-5" id="que-BO-wd3"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="MQe-wf-GI5"/>
             <size key="customSize" width="130" height="88"/>
             <connections>
                 <outlet property="imageView" destination="ccA-vJ-Kmj" id="Shj-Q9-Eea"/>
+                <outlet property="releaseDateLabel" destination="KFG-qb-2Pn" id="Da6-Ym-nT5"/>
+                <outlet property="releaseDateView" destination="ukP-U8-Hkv" id="ATV-2W-USI"/>
             </connections>
             <point key="canvasLocation" x="88" y="127.736131934033"/>
         </collectionViewCell>
