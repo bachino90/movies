@@ -7,3 +7,15 @@
 //
 
 import Foundation
+
+class MediaVideosSection: Section {
+
+    init(videos: [Video]?, backdropPath: String?) {
+        super.init()
+        if let videos = videos {
+            rows = videos.map { MediaVideoRow(video: $0, backdropPath: backdropPath) }
+        } else {
+
+        }
+    }
+}

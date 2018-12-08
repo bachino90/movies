@@ -22,7 +22,10 @@ class MediaViewModel: StateViewModel {
         apiStore.getResource(media.type, byId: media.id)
             .observeOn(MainScheduler.instance)
             .subscribe(onNext: { [weak self] response in
-                self?.state.value = .success([MediaDetailsSection(media: response.0, videos: response.1.videos)])
+                self?.state.value = .success([
+                    MediaDetailsSection(media: response.0),
+                    MediaVideosSection(videos: response.1.videos, backdropPath: self?.media.backdropPath)
+                    ])
                 }, onError: { [weak self] _ in
                     self?.state.value = .error
             }).disposed(by: disposeBag)
