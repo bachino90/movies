@@ -15,7 +15,14 @@ class SearchViewModel: StateViewModel {
     private var page = 1
     private var results: [Media] = []
 
-    var query: String? { didSet { search() } }
+    var query: String? {
+        didSet {
+            if (query?.count ?? 0) > 1 {
+                state.value = .success([SearchResultsSection(listOfMedia: [], loadMore: true)])
+            }
+            search()
+        }
+    }
 
     func loadMore() {
         page += 1
