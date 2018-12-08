@@ -11,4 +11,5 @@ target 'rappmovie' do
   pod 'RxCocoa'
   pod 'Alamofire'
   pod 'AlamofireImage', '~> 3.5'
+  pod 'YoutubeDirectLinkExtractor'
 end

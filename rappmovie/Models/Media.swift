@@ -40,6 +40,7 @@ class Media: Model {
     let id: Int
     let title: String
     let posterPath: String
+    let backdropPath: String?
     let popularity: Float
     let voteAverage: Float
     let overview: String
@@ -74,6 +75,7 @@ class Media: Model {
         self.originalLanguage = originalLanguage
         self.voteCount = voteCount
         self.runTime = json["runtime"].int
+        self.backdropPath = json["backdrop_path"].string
         self.genres = json["genres"].arrayValue.compactMap { Genre($0) }
         self.genreIds = json["genre_ids"].arrayValue.compactMap { $0.int }
         self.originCountry = json["origin_country"].arrayValue.map { $0.stringValue }

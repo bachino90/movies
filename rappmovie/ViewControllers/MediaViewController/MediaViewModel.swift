@@ -18,11 +18,11 @@ class MediaViewModel: StateViewModel {
     }
 
     func getDetails() {
-        state.value = .success([MediaDetailsSection(media)])
+        state.value = .success([MediaDetailsSection(media: media)])
         apiStore.getResource(media.type, byId: media.id)
             .observeOn(MainScheduler.instance)
             .subscribe(onNext: { [weak self] response in
-                self?.state.value = .success([MediaDetailsSection(response.0)])
+                self?.state.value = .success([MediaDetailsSection(media: response.0, videos: response.1.videos)])
                 }, onError: { [weak self] _ in
                     self?.state.value = .error
             }).disposed(by: disposeBag)

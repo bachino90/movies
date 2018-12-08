@@ -8,6 +8,7 @@ PODS:
   - RxSwift (4.4.0):
     - RxAtomic (~> 4.4)
   - SwiftyJSON (4.2.0)
+  - YoutubeDirectLinkExtractor (0.2.0)
 
 DEPENDENCIES:
   - Alamofire
@@ -15,6 +16,7 @@ DEPENDENCIES:
   - RxCocoa
   - RxSwift
   - SwiftyJSON (~> 4.2.0)
+  - YoutubeDirectLinkExtractor
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -24,6 +26,7 @@ SPEC REPOS:
     - RxCocoa
     - RxSwift
     - SwiftyJSON
+    - YoutubeDirectLinkExtractor
 
 SPEC CHECKSUMS:
   Alamofire: 3ec537f71edc9804815215393ae2b1a8ea33a844
@@ -32,7 +35,8 @@ SPEC CHECKSUMS:
   RxCocoa: df63ebf7b9a70d6b4eeea407ed5dd4efc8979749
   RxSwift: 5976ecd04fc2fefd648827c23de5e11157faa973
   SwiftyJSON: c4bcba26dd9ec7a027fc8eade48e2c911f229e96
+  YoutubeDirectLinkExtractor: 068b6a09d64551cb7cec966179d7f5f5824cd2db
 
-PODFILE CHECKSUM: 1e6f85473c6694c238ee268a718ca01b7304eeb3
+PODFILE CHECKSUM: 267ac1892feb4246e8a199406bd252bcd3c318a0
 
 COCOAPODS: 1.5.3

@@ -52,6 +52,11 @@
 		386D9FFE21BB34E3004985F2 /* LoadingCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 386D9FFD21BB34E3004985F2 /* LoadingCollectionCell.swift */; };
 		386DA00121BB350A004985F2 /* LoadingCollectionRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 386DA00021BB350A004985F2 /* LoadingCollectionRow.swift */; };
 		386DA00321BB3C49004985F2 /* LoadingCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 386DA00221BB3C49004985F2 /* LoadingCollectionCell.xib */; };
+		386DA00521BC226E004985F2 /* YouTubeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 386DA00421BC226E004985F2 /* YouTubeView.swift */; };
+		386DA00821BC22CB004985F2 /* YouTubeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 386DA00721BC22CB004985F2 /* YouTubeView.xib */; };
+		386DA00B21BC314D004985F2 /* MediaVideosSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 386DA00A21BC314D004985F2 /* MediaVideosSection.swift */; };
+		386DA00E21BC4549004985F2 /* VideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 386DA00D21BC4549004985F2 /* VideoViewController.swift */; };
+		386DA01021BC45B7004985F2 /* VideoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 386DA00F21BC45B7004985F2 /* VideoViewController.xib */; };
 		38CB09AB21B7449B0023514B /* Media.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38CB09AA21B7449B0023514B /* Media.swift */; };
 		38CB09AD21B74AF50023514B /* APIStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38CB09AC21B74AF50023514B /* APIStore.swift */; };
 		38CB09AF21B75A310023514B /* ListOfMovies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38CB09AE21B75A310023514B /* ListOfMovies.swift */; };
@@ -124,6 +129,11 @@
 		386D9FFD21BB34E3004985F2 /* LoadingCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingCollectionCell.swift; sourceTree = "<group>"; };
 		386DA00021BB350A004985F2 /* LoadingCollectionRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingCollectionRow.swift; sourceTree = "<group>"; };
 		386DA00221BB3C49004985F2 /* LoadingCollectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoadingCollectionCell.xib; sourceTree = "<group>"; };
+		386DA00421BC226E004985F2 /* YouTubeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YouTubeView.swift; sourceTree = "<group>"; };
+		386DA00721BC22CB004985F2 /* YouTubeView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = YouTubeView.xib; sourceTree = "<group>"; };
+		386DA00A21BC314D004985F2 /* MediaVideosSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaVideosSection.swift; sourceTree = "<group>"; };
+		386DA00D21BC4549004985F2 /* VideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoViewController.swift; sourceTree = "<group>"; };
+		386DA00F21BC45B7004985F2 /* VideoViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VideoViewController.xib; sourceTree = "<group>"; };
 		38CB09AA21B7449B0023514B /* Media.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Media.swift; sourceTree = "<group>"; };
 		38CB09AC21B74AF50023514B /* APIStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIStore.swift; sourceTree = "<group>"; };
 		38CB09AE21B75A310023514B /* ListOfMovies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListOfMovies.swift; sourceTree = "<group>"; };
@@ -215,6 +225,7 @@
 			isa = PBXGroup;
 			children = (
 				38392DE921B8C81200634C94 /* MediaDetailsSection.swift */,
+				386DA00A21BC314D004985F2 /* MediaVideosSection.swift */,
 				38392DEB21B9538A00634C94 /* MediaHeaderCell */,
 				38392DEC21B9539700634C94 /* MediaDescriptionCell */,
 				38392DED21B953A700634C94 /* MediaVideosCell */,
@@ -259,6 +270,7 @@
 				38392E0521BA09F500634C94 /* Styler.swift */,
 				38392E0721BA0BB700634C94 /* GradientView.swift */,
 				386D9FF921BB30AF004985F2 /* UIView+Extensions.swift */,
+				386DA00621BC22B1004985F2 /* YouTubeView */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -301,6 +313,24 @@
 				386DA00221BB3C49004985F2 /* LoadingCollectionCell.xib */,
 			);
 			path = LoadingRow;
+			sourceTree = "<group>";
+		};
+		386DA00621BC22B1004985F2 /* YouTubeView */ = {
+			isa = PBXGroup;
+			children = (
+				386DA00421BC226E004985F2 /* YouTubeView.swift */,
+				386DA00721BC22CB004985F2 /* YouTubeView.xib */,
+			);
+			path = YouTubeView;
+			sourceTree = "<group>";
+		};
+		386DA00C21BC4533004985F2 /* VideoViewController */ = {
+			isa = PBXGroup;
+			children = (
+				386DA00D21BC4549004985F2 /* VideoViewController.swift */,
+				386DA00F21BC45B7004985F2 /* VideoViewController.xib */,
+			);
+			path = VideoViewController;
 			sourceTree = "<group>";
 		};
 		38E4E8F721B5FDEA006CC493 = {
@@ -369,6 +399,7 @@
 				38E4E93321B624C7006CC493 /* HomeViewController */,
 				38392E0921BA129700634C94 /* SearchViewController */,
 				38392DDF21B8B22600634C94 /* MediaViewController */,
+				386DA00C21BC4533004985F2 /* VideoViewController */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -488,11 +519,13 @@
 			files = (
 				38E4E90E21B5FDEC006CC493 /* LaunchScreen.storyboard in Resources */,
 				38392DC721B842E100634C94 /* MediaCarrouselCell.xib in Resources */,
+				386DA00821BC22CB004985F2 /* YouTubeView.xib in Resources */,
 				38392E0D21BA12B800634C94 /* SearchViewController.xib in Resources */,
 				38E4E90B21B5FDEC006CC493 /* Assets.xcassets in Resources */,
 				38392DC521B842A200634C94 /* GenresCarrouselCell.xib in Resources */,
 				38CB09B521B76E540023514B /* HomeViewController.xib in Resources */,
 				38392DF121B953CB00634C94 /* MediaHeaderCell.xib in Resources */,
+				386DA01021BC45B7004985F2 /* VideoViewController.xib in Resources */,
 				38392DD321B868E000634C94 /* MediaCollectionCell.xib in Resources */,
 				386DA00321BB3C49004985F2 /* LoadingCollectionCell.xib in Resources */,
 				38392DF921B953FE00634C94 /* MediaOverviewCell.xib in Resources */,
@@ -518,6 +551,7 @@
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+				"${BUILT_PRODUCTS_DIR}/YoutubeDirectLinkExtractor/YoutubeDirectLinkExtractor.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
@@ -527,6 +561,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YoutubeDirectLinkExtractor.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -563,6 +598,7 @@
 				38392DD621B872F000634C94 /* CarrouselCell.swift in Sources */,
 				38392DFE21B9EF2A00634C94 /* DateUtils.swift in Sources */,
 				38E4E93B21B62533006CC493 /* TVShow.swift in Sources */,
+				386DA00E21BC4549004985F2 /* VideoViewController.swift in Sources */,
 				38392DBB21B8237D00634C94 /* Genre.swift in Sources */,
 				38392DC321B8428B00634C94 /* GenresCarrouselRow.swift in Sources */,
 				38392DF521B953EC00634C94 /* MediaOverviewRow.swift in Sources */,
@@ -574,6 +610,7 @@
 				38392DC121B8427D00634C94 /* GenresCarrouselCell.swift in Sources */,
 				38392E0621BA09F500634C94 /* Styler.swift in Sources */,
 				38392E0021B9F9F400634C94 /* MediaVideoCell.swift in Sources */,
+				386DA00521BC226E004985F2 /* YouTubeView.swift in Sources */,
 				38392E1521BAAF7200634C94 /* SearchResultsSection.swift in Sources */,
 				386DA00121BB350A004985F2 /* LoadingCollectionRow.swift in Sources */,
 				38392DCD21B868A600634C94 /* GenreCollectionCell.swift in Sources */,
@@ -599,6 +636,7 @@
 				38E4E90421B5FDEA006CC493 /* AppDelegate.swift in Sources */,
 				38392DBD21B8245500634C94 /* ListOfGenres.swift in Sources */,
 				38392E1821BAAFB600634C94 /* MediaRow.swift in Sources */,
+				386DA00B21BC314D004985F2 /* MediaVideosSection.swift in Sources */,
 				38392DFB21B9EEAA00634C94 /* MediaOverviewCell.swift in Sources */,
 				38CB09AD21B74AF50023514B /* APIStore.swift in Sources */,
 				38392E0B21BA12AB00634C94 /* SearchViewController.swift in Sources */,

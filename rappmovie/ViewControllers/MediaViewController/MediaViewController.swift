@@ -30,6 +30,7 @@ class MediaViewController: TableViewController {
 
         tableView.register(MediaHeaderCell.self)
         tableView.register(MediaOverviewCell.self)
+        tableView.register(MediaVideoCell.self)
 
         let _ = viewModel.state.asObservable()
             .observeOn(MainScheduler.instance)
@@ -53,5 +54,12 @@ class MediaViewController: TableViewController {
 
     @IBAction func close() {
         dismiss(animated: true)
+    }
+}
+
+extension MediaViewController: MediaVideoRowDelegate {
+    func actionDidRequestToPlay(video: Video) {
+        let vc = VideoViewController(video: video)
+        present(vc, animated: true)
     }
 }

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="VideoViewController" customModule="rappmovie" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="FDc-Ke-HM2" id="CiJ-a6-22f"/>
+                <outlet property="youtubeView" destination="L2D-pB-Tn9" id="cgQ-k2-ppR"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="FDc-Ke-HM2">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="L2D-pB-Tn9" customClass="YouTubeView" customModule="rappmovie" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="233.5" width="375" height="200"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="200" id="26g-Fb-Shl"/>
+                    </constraints>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uwA-lL-fMY">
+                    <rect key="frame" x="164.5" y="557" width="46" height="30"/>
+                    <state key="normal" title="Button"/>
+                    <connections>
+                        <action selector="dismiss" destination="-1" eventType="touchUpInside" id="odg-yG-V3E"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="X6q-5t-VqG" firstAttribute="trailing" secondItem="L2D-pB-Tn9" secondAttribute="trailing" id="Fq4-Kb-mKh"/>
+                <constraint firstItem="L2D-pB-Tn9" firstAttribute="centerY" secondItem="FDc-Ke-HM2" secondAttribute="centerY" id="NRF-xo-pyX"/>
+                <constraint firstItem="uwA-lL-fMY" firstAttribute="centerX" secondItem="FDc-Ke-HM2" secondAttribute="centerX" id="Pof-YP-2c7"/>
+                <constraint firstItem="L2D-pB-Tn9" firstAttribute="leading" secondItem="X6q-5t-VqG" secondAttribute="leading" id="iT2-UJ-EaM"/>
+                <constraint firstItem="X6q-5t-VqG" firstAttribute="bottom" secondItem="uwA-lL-fMY" secondAttribute="bottom" constant="80" id="uSC-Ez-JxR"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="X6q-5t-VqG"/>
+            <point key="canvasLocation" x="-57" y="154"/>
+        </view>
+    </objects>
+</document>
