@@ -29,7 +29,6 @@ class SearchViewController: CollectionViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-//        searchView.backgroundColor = Styler.Color.black
         searchView.addBlurEffect(style: .dark)
 
         view.backgroundColor = Styler.Color.darkGray
@@ -46,7 +45,7 @@ class SearchViewController: CollectionViewController {
             .throttle(0.4, latest: true, scheduler: MainScheduler.instance)
             .subscribe(onNext: {
                 self.viewModel.resetPage()
-                self.viewModel.search(query: $0)
+                self.viewModel.query = $0
             })
             .disposed(by: disposeBag)
 
@@ -58,6 +57,7 @@ class SearchViewController: CollectionViewController {
     }
 
     @IBAction func dismiss() {
+        searchTextField.resignFirstResponder()
         dismiss(animated: true)
     }
 
@@ -103,5 +103,12 @@ extension SearchViewController: MediaRowDelegate {
     func actionDidRequesToOpen(media: Media) {
         let vc = MediaViewController(media: media)
         present(vc, animated: true)
+    }
+}
+
+extension SearchViewController: LoadingRowDelegate {
+
+    func actionDidRequestToLoadMore() {
+        viewModel.loadMore()
     }
 }
