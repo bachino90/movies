@@ -17,6 +17,7 @@ class HomeHeaderCell: UITableViewCell, TableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
+        backgroundImageView.backgroundColor = Styler.Color.darkGray
         titleLabel.textColor = Styler.Color.darkWhite
         titleLabel.font = UIFont.appSemiBoldFontWith(size: 25)
         titleLabel.shadowColor = Styler.Color.darkGray

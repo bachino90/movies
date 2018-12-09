@@ -16,6 +16,8 @@ class MediaViewController: TableViewController {
     init(media: Media) {
         viewModel = MediaViewModel(media: media)
         super.init(nibName: "MediaViewController", bundle: nil)
+        transitioningDelegate = self
+        modalPresentationStyle = .custom
     }
 
     required init?(coder aDecoder: NSCoder) {
@@ -54,6 +56,21 @@ class MediaViewController: TableViewController {
 
     @IBAction func close() {
         dismiss(animated: true)
+    }
+}
+
+extension MediaViewController: UIViewControllerTransitioningDelegate {
+
+    func presentationController(forPresented presented: UIViewController, presenting: UIViewController?, source: UIViewController) -> UIPresentationController? {
+        return GrowthFadePresentationController(presentedViewController: presented, presenting: presenting)
+    }
+
+    func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        return GrowthFadeAnimationController()
+    }
+
+    func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        return GrowthFadeDismissAnimationController()
     }
 }
 
