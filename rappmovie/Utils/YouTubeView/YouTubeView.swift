@@ -13,6 +13,8 @@ import YoutubeDirectLinkExtractor
 class YouTubeView: UIView {
 
     @IBOutlet private var contentView: UIView!
+    @IBOutlet private var playImageView: UIImageView!
+    @IBOutlet private var activityIndicator: UIActivityIndicatorView!
 
     private var player: AVPlayer?
     private let extractor = YoutubeDirectLinkExtractor()
@@ -45,7 +47,8 @@ class YouTubeView: UIView {
     var video: Video? {
         didSet {
             guard let video = self.video else { return }
-
+            activityIndicator.startAnimating()
+            playImageView.isHidden = true
             extractor.extractInfo(for: .id(video.key), success: { [weak self] info in
                 DispatchQueue.main.async {
                     guard let strongSelf = self else { return }
@@ -75,14 +78,15 @@ class YouTubeView: UIView {
     @objc private func playVideo() {
         if player?.timeControlStatus == .playing {
             stop()
-//            playButton.isHidden = false
+            playImageView.isHidden = false
         } else {
             play()
-//            playButton.isHidden = true
+            playImageView.isHidden = true
         }
     }
 
     func play() {
+        activityIndicator.stopAnimating()
         player?.play()
     }
 
