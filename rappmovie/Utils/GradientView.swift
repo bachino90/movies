@@ -11,28 +11,18 @@ import UIKit
 @IBDesignable
 class GradientView: UIView {
 
-    // the gradient start colour
     @IBInspectable var startColor: UIColor? {
-        didSet {
-            updateGradient()
-        }
+        didSet { updateGradient() }
     }
 
-    // the gradient end colour
     @IBInspectable var endColor: UIColor? {
-        didSet {
-            updateGradient()
-        }
+        didSet { updateGradient() }
     }
 
-    // the gradient angle, in degrees anticlockwise from 0 (east/right)
     @IBInspectable var angle: CGFloat = 270 {
-        didSet {
-            updateGradient()
-        }
+        didSet { updateGradient() }
     }
 
-    // the gradient layer
     private var gradient: CAGradientLayer?
 
     // initializers
@@ -46,9 +36,7 @@ class GradientView: UIView {
         installGradient()
     }
 
-    // Create a gradient and install it on the layer
     private func installGradient() {
-        // if there's already a gradient installed on the layer, remove it
         if let gradient = self.gradient {
             gradient.removeFromSuperlayer()
         }
@@ -57,7 +45,6 @@ class GradientView: UIView {
         self.gradient = gradient
     }
 
-    // Update an existing gradient
     private func updateGradient() {
         if let gradient = self.gradient {
             let startColor = self.startColor ?? UIColor.clear
@@ -69,7 +56,6 @@ class GradientView: UIView {
         }
     }
 
-    // create gradient layer
     private func createGradient() -> CAGradientLayer {
         let gradient = CAGradientLayer()
         gradient.frame = self.bounds
@@ -95,7 +81,7 @@ class GradientView: UIView {
         var x = cos(radians)
         var y = sin(radians)
         // (x,y) is in terms unit circle. Extrapolate to unit square to get full vector length
-        if (fabs(x) > fabs(y)) {
+        if (abs(x) > abs(y)) {
             // extrapolate x to unit length
             x = x > 0 ? 1 : -1
             y = x * tan(radians)
@@ -119,7 +105,6 @@ class GradientView: UIView {
         return CGPoint(x: -point.x, y: -point.y)
     }
 
-    // ensure the gradient gets initialized when the view is created in IB
     override func prepareForInterfaceBuilder() {
         super.prepareForInterfaceBuilder()
         installGradient()
