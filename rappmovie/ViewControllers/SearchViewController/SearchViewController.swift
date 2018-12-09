@@ -19,8 +19,12 @@ class SearchViewController: CollectionViewController {
     private let viewModel = SearchViewModel()
     private var disposeBag = DisposeBag()
 
+    override var preferredStatusBarStyle: UIStatusBarStyle { return .lightContent }
+
     init() {
         super.init(nibName: "SearchViewController", bundle: nil)
+        modalPresentationStyle = .overFullScreen
+        modalTransitionStyle = .crossDissolve
     }
 
     required init?(coder aDecoder: NSCoder) {
@@ -30,16 +34,18 @@ class SearchViewController: CollectionViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        view.backgroundColor = .clear
+        view.addBlurEffect(style: .dark)
         navigationView.addBlurEffect(style: .dark)
-
-        view.backgroundColor = Styler.Color.darkGray
 
         searchContainerView.backgroundColor = Styler.Color.darkGray.withAlphaComponent(0.5)
         searchContainerView.layer.cornerRadius = 5
         
         searchTextField.textColor = Styler.Color.darkWhite
+        searchTextField.attributedPlaceholder = NSAttributedString(string: "Search for movies and tv shows", attributes: [NSAttributedString.Key.foregroundColor: UIColor(white: 1.0, alpha: 0.5)])
 
-        collectionView.backgroundColor = Styler.Color.darkGray
+
+        collectionView.backgroundColor = .clear
         collectionView.register(MediaCollectionCell.self)
         collectionView.register(LoadingCollectionCell.self)
         
