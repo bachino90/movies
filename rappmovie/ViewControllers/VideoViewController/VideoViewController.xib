@@ -28,9 +28,9 @@
                         <constraint firstAttribute="height" constant="200" id="26g-Fb-Shl"/>
                     </constraints>
                 </view>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uwA-lL-fMY">
-                    <rect key="frame" x="164.5" y="557" width="46" height="30"/>
-                    <state key="normal" title="Button"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uwA-lL-fMY">
+                    <rect key="frame" x="157.5" y="527" width="60" height="60"/>
+                    <state key="normal" image="big_close"/>
                     <connections>
                         <action selector="dismiss" destination="-1" eventType="touchUpInside" id="odg-yG-V3E"/>
                     </connections>
@@ -48,4 +48,7 @@
             <point key="canvasLocation" x="-57" y="154"/>
         </view>
     </objects>
+    <resources>
+        <image name="big_close" width="60" height="60"/>
+    </resources>
 </document>

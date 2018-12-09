@@ -25,9 +25,13 @@
                     <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </tableView>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1da-yy-DGy">
-                    <rect key="frame" x="320" y="32" width="39" height="30"/>
-                    <state key="normal" title="Close"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="top" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1da-yy-DGy">
+                    <rect key="frame" x="319" y="32" width="40" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="AQ1-B2-2iP"/>
+                        <constraint firstAttribute="width" constant="40" id="ZZJ-Ke-PXw"/>
+                    </constraints>
+                    <state key="normal" image="small_close"/>
                     <connections>
                         <action selector="close" destination="-1" eventType="touchUpInside" id="yeO-O7-fHl"/>
                     </connections>
@@ -46,4 +50,7 @@
             <point key="canvasLocation" x="39" y="-89"/>
         </view>
     </objects>
+    <resources>
+        <image name="small_close" width="24" height="24"/>
+    </resources>
 </document>
