@@ -12,7 +12,8 @@ import RxCocoa
 
 class SearchViewController: CollectionViewController {
 
-    @IBOutlet private var searchView: UIView!
+    @IBOutlet private var navigationView: UIView!
+    @IBOutlet private var searchContainerView: UIView!
     @IBOutlet private var searchTextField: UITextField!
 
     private let viewModel = SearchViewModel()
@@ -29,12 +30,13 @@ class SearchViewController: CollectionViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        searchView.addBlurEffect(style: .dark)
+        navigationView.addBlurEffect(style: .dark)
 
         view.backgroundColor = Styler.Color.darkGray
 
-        searchTextField.backgroundColor = Styler.Color.darkGray
-        searchTextField.layer.cornerRadius = 5
+        searchContainerView.backgroundColor = Styler.Color.darkGray.withAlphaComponent(0.5)
+        searchContainerView.layer.cornerRadius = 5
+        
         searchTextField.textColor = Styler.Color.darkWhite
 
         collectionView.backgroundColor = Styler.Color.darkGray
