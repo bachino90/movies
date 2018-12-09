@@ -44,9 +44,9 @@ protocol TableViewCell: ReusableView {
 
 class GenericRow<T: TableViewCell>: Row {
 
-    override var cellIdentifier: String { get { return T.defaultReuseIdentifier } }
+    override var cellIdentifier: String { return T.defaultReuseIdentifier }
 
-    override var cellHeight: CGFloat { get { return T.cellHeight() } }
+    override var cellHeight: CGFloat { return T.cellHeight() }
 
     override func configureCell(_ cell: UIView) {
         if let cell = cell as? T { configureReusableCell(cell) }
@@ -88,4 +88,13 @@ class Section: Action {
     override weak var actionDelegate: ActionDelegate? {
         didSet { rows.forEach { $0.actionDelegate = self.actionDelegate } }
     }
+}
+
+class GenericSection<T: TableViewCell>: Section {
+
+    override var headerHeight: CGFloat { return T.cellHeight() }
+
+    override func configureHeader(_ cell: UITableViewCell) { }
+
+    override var headerCellIdentifier: String? { return T.defaultReuseIdentifier }
 }

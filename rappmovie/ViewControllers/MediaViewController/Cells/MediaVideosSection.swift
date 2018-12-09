@@ -8,14 +8,14 @@
 
 import Foundation
 
-class MediaVideosSection: Section {
+class MediaVideosSection: GenericSection<VideoHeaderCell> {
 
     init(videos: [Video]?, backdropPath: String?) {
         super.init()
         if let videos = videos {
             rows = videos.map { MediaVideoRow(video: $0, backdropPath: backdropPath) }
         } else {
-
+            rows = [LoadingRow()]
         }
     }
 }

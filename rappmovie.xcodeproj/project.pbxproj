@@ -64,6 +64,11 @@
 		386DA01D21BD5B81004985F2 /* GrowthFadePresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 386DA01C21BD5B81004985F2 /* GrowthFadePresentationController.swift */; };
 		386DA02021BD5B9D004985F2 /* GrowthFadeAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 386DA01F21BD5B9D004985F2 /* GrowthFadeAnimationController.swift */; };
 		386DA02221BD5BB5004985F2 /* GrowthFadeDismissAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 386DA02121BD5BB5004985F2 /* GrowthFadeDismissAnimationController.swift */; };
+		386DA02521BDA34A004985F2 /* LoadingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 386DA02421BDA34A004985F2 /* LoadingCell.swift */; };
+		386DA02721BDA359004985F2 /* LoadingRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 386DA02621BDA359004985F2 /* LoadingRow.swift */; };
+		386DA02921BDA3D0004985F2 /* LoadingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 386DA02821BDA3D0004985F2 /* LoadingCell.xib */; };
+		386DA02C21BDA5C9004985F2 /* VideoHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 386DA02B21BDA5C9004985F2 /* VideoHeaderCell.swift */; };
+		386DA02E21BDA5D3004985F2 /* VideoHeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 386DA02D21BDA5D3004985F2 /* VideoHeaderCell.xib */; };
 		38CB09AB21B7449B0023514B /* Media.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38CB09AA21B7449B0023514B /* Media.swift */; };
 		38CB09AD21B74AF50023514B /* APIStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38CB09AC21B74AF50023514B /* APIStore.swift */; };
 		38CB09AF21B75A310023514B /* ListOfMovies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38CB09AE21B75A310023514B /* ListOfMovies.swift */; };
@@ -148,6 +153,11 @@
 		386DA01C21BD5B81004985F2 /* GrowthFadePresentationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrowthFadePresentationController.swift; sourceTree = "<group>"; };
 		386DA01F21BD5B9D004985F2 /* GrowthFadeAnimationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrowthFadeAnimationController.swift; sourceTree = "<group>"; };
 		386DA02121BD5BB5004985F2 /* GrowthFadeDismissAnimationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrowthFadeDismissAnimationController.swift; sourceTree = "<group>"; };
+		386DA02421BDA34A004985F2 /* LoadingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingCell.swift; sourceTree = "<group>"; };
+		386DA02621BDA359004985F2 /* LoadingRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingRow.swift; sourceTree = "<group>"; };
+		386DA02821BDA3D0004985F2 /* LoadingCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoadingCell.xib; sourceTree = "<group>"; };
+		386DA02B21BDA5C9004985F2 /* VideoHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoHeaderCell.swift; sourceTree = "<group>"; };
+		386DA02D21BDA5D3004985F2 /* VideoHeaderCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VideoHeaderCell.xib; sourceTree = "<group>"; };
 		38CB09AA21B7449B0023514B /* Media.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Media.swift; sourceTree = "<group>"; };
 		38CB09AC21B74AF50023514B /* APIStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIStore.swift; sourceTree = "<group>"; };
 		38CB09AE21B75A310023514B /* ListOfMovies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListOfMovies.swift; sourceTree = "<group>"; };
@@ -213,6 +223,8 @@
 		38392DD421B872DC00634C94 /* Generics */ = {
 			isa = PBXGroup;
 			children = (
+				386D9FFC21BB34D3004985F2 /* LoadingCollectionRow */,
+				386DA02321BDA2EE004985F2 /* LoadingRow */,
 				386D9FFB21BB3495004985F2 /* MediaRow */,
 				38E4E92C21B62317006CC493 /* TableViewController.swift */,
 				38392E1221BAACA800634C94 /* CollectionViewController.swift */,
@@ -242,6 +254,7 @@
 				386DA00A21BC314D004985F2 /* MediaVideosSection.swift */,
 				38392DEB21B9538A00634C94 /* MediaHeaderCell */,
 				38392DEC21B9539700634C94 /* MediaDescriptionCell */,
+				386DA02A21BDA597004985F2 /* VideosHeaderCell */,
 				38392DED21B953A700634C94 /* MediaVideosCell */,
 			);
 			path = Cells;
@@ -305,7 +318,6 @@
 			isa = PBXGroup;
 			children = (
 				38392E1421BAAF7200634C94 /* SearchResultsSection.swift */,
-				386D9FFC21BB34D3004985F2 /* LoadingRow */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -320,14 +332,14 @@
 			path = MediaRow;
 			sourceTree = "<group>";
 		};
-		386D9FFC21BB34D3004985F2 /* LoadingRow */ = {
+		386D9FFC21BB34D3004985F2 /* LoadingCollectionRow */ = {
 			isa = PBXGroup;
 			children = (
 				386DA00021BB350A004985F2 /* LoadingCollectionRow.swift */,
 				386D9FFD21BB34E3004985F2 /* LoadingCollectionCell.swift */,
 				386DA00221BB3C49004985F2 /* LoadingCollectionCell.xib */,
 			);
-			path = LoadingRow;
+			path = LoadingCollectionRow;
 			sourceTree = "<group>";
 		};
 		386DA00621BC22B1004985F2 /* YouTubeView */ = {
@@ -374,6 +386,25 @@
 				386DA02121BD5BB5004985F2 /* GrowthFadeDismissAnimationController.swift */,
 			);
 			path = GrowthFade;
+			sourceTree = "<group>";
+		};
+		386DA02321BDA2EE004985F2 /* LoadingRow */ = {
+			isa = PBXGroup;
+			children = (
+				386DA02621BDA359004985F2 /* LoadingRow.swift */,
+				386DA02421BDA34A004985F2 /* LoadingCell.swift */,
+				386DA02821BDA3D0004985F2 /* LoadingCell.xib */,
+			);
+			path = LoadingRow;
+			sourceTree = "<group>";
+		};
+		386DA02A21BDA597004985F2 /* VideosHeaderCell */ = {
+			isa = PBXGroup;
+			children = (
+				386DA02B21BDA5C9004985F2 /* VideoHeaderCell.swift */,
+				386DA02D21BDA5D3004985F2 /* VideoHeaderCell.xib */,
+			);
+			path = VideosHeaderCell;
 			sourceTree = "<group>";
 		};
 		38E4E8F721B5FDEA006CC493 = {
@@ -571,12 +602,14 @@
 				38392DC521B842A200634C94 /* GenresCarrouselCell.xib in Resources */,
 				38CB09B521B76E540023514B /* HomeViewController.xib in Resources */,
 				38392DF121B953CB00634C94 /* MediaHeaderCell.xib in Resources */,
+				386DA02921BDA3D0004985F2 /* LoadingCell.xib in Resources */,
 				386DA01021BC45B7004985F2 /* VideoViewController.xib in Resources */,
 				38392DD321B868E000634C94 /* MediaCollectionCell.xib in Resources */,
 				386DA00321BB3C49004985F2 /* LoadingCollectionCell.xib in Resources */,
 				38392DF921B953FE00634C94 /* MediaOverviewCell.xib in Resources */,
 				38392DCF21B868B200634C94 /* GenreCollectionCell.xib in Resources */,
 				38392E0421B9FA0900634C94 /* MediaVideoCell.xib in Resources */,
+				386DA02E21BDA5D3004985F2 /* VideoHeaderCell.xib in Resources */,
 				38392DE321B8B27600634C94 /* MediaViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -647,6 +680,7 @@
 				386DA00E21BC4549004985F2 /* VideoViewController.swift in Sources */,
 				38392DBB21B8237D00634C94 /* Genre.swift in Sources */,
 				38392DC321B8428B00634C94 /* GenresCarrouselRow.swift in Sources */,
+				386DA02C21BDA5C9004985F2 /* VideoHeaderCell.swift in Sources */,
 				386DA01D21BD5B81004985F2 /* GrowthFadePresentationController.swift in Sources */,
 				386DA01721BD52F8004985F2 /* HomeHeaderRow.swift in Sources */,
 				38392DF521B953EC00634C94 /* MediaOverviewRow.swift in Sources */,
@@ -681,6 +715,7 @@
 				38392E0F21BA12C700634C94 /* SearchViewModel.swift in Sources */,
 				38392DE721B8C69200634C94 /* StateViewModel.swift in Sources */,
 				38E4E92721B62293006CC493 /* HomeViewController.swift in Sources */,
+				386DA02521BDA34A004985F2 /* LoadingCell.swift in Sources */,
 				38392DCB21B842F200634C94 /* MediaCarrouselRow.swift in Sources */,
 				38E4E92F21B62389006CC493 /* CellProtocols.swift in Sources */,
 				386DA02221BD5BB5004985F2 /* GrowthFadeDismissAnimationController.swift in Sources */,
@@ -688,6 +723,7 @@
 				38392DBD21B8245500634C94 /* ListOfGenres.swift in Sources */,
 				38392E1821BAAFB600634C94 /* MediaRow.swift in Sources */,
 				386DA00B21BC314D004985F2 /* MediaVideosSection.swift in Sources */,
+				386DA02721BDA359004985F2 /* LoadingRow.swift in Sources */,
 				38392DFB21B9EEAA00634C94 /* MediaOverviewCell.swift in Sources */,
 				38CB09AD21B74AF50023514B /* APIStore.swift in Sources */,
 				386DA01521BD5298004985F2 /* HomeHeaderCell.swift in Sources */,

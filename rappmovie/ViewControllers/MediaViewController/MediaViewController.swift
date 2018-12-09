@@ -33,6 +33,8 @@ class MediaViewController: TableViewController {
         tableView.register(MediaHeaderCell.self)
         tableView.register(MediaOverviewCell.self)
         tableView.register(MediaVideoCell.self)
+        tableView.register(LoadingCell.self)
+        tableView.register(VideoHeaderCell.self)
 
         let _ = viewModel.state.asObservable()
             .observeOn(MainScheduler.instance)

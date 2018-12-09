@@ -17,6 +17,7 @@ class MediaOverviewCell: UITableViewCell, TableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         overviewLabel.textColor = Styler.Color.darkWhite
+        overviewLabel.font = UIFont.appRegularFontWith(size: 12)
         backgroundColor = Styler.Color.darkGray
     }
 
