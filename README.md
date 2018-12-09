@@ -6,7 +6,18 @@
 
 ![Diagram](diagram.png)
 
-El `APIStore` es responsable de devolver los observables que devuelven información 
+Los ViewController son los responsables de mostrar la información obtenida de los `StateViewModel`. Para ello cada view model tiene un `state`, el cual puede tener los siguientes valores:
+
+  - `initial`
+  - `loading`
+  - `sucess`
+  - `error`
+
+Los cambios del `state` son escuchados por los ViewController los cuales saben que presentar en cada caso (`stateHasChanged`).
+
+Los `StateViewModel` son los encargados de hacer los request y estructurarlos en `Section` y `Row` los cuales son utilizados por los `TableViewController` para definir que mostrar.
+
+El `APIStore` es responsable de devolver los observables que hacen el request a la API (o devuelven los request cacheados)
 
 ## Clases
 
@@ -21,6 +32,10 @@ El `APIStore` es responsable de devolver los observables que devuelven informaci
 - `Row` representa una celda en un `UITableView` (o `UICollectionView`)
 
 - `Section` representa una sección de celdas en un `UITableView` (o `UICollectionView`). Cada `Section` tiene un array de `Row`
+
+- `TableViewController` es una subclase de `UIViewController` que implementa un `tableView` (con su `delegate` y `dataSource`) y un array de `Section` el cual es el responsable de actualizar la tabla cuando se setea.
+
+- `CollectionViewController` cumple el mismo proposito que el `TableViewController` pero con un `UICollectionView`
 
 ## Preguntas
 
