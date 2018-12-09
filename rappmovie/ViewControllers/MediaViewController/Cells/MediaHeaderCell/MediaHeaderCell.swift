@@ -47,6 +47,10 @@ class MediaHeaderCell: UITableViewCell, TableViewCell {
             subtitles.append(time)
         }
 
+        if let media = media as? TVShow, let numberOfSeasons = media.numberOfSeasons {
+            subtitles.append("\(numberOfSeasons) SEASONS")
+        }
+
         subtitleLabel.text = subtitles.joined(separator: " ・ ")
     }
 

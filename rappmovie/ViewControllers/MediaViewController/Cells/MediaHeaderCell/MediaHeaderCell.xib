@@ -22,17 +22,17 @@
                         <rect key="frame" x="0.0" y="-200" width="375" height="502.5"/>
                     </imageView>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EzS-cp-vdI" customClass="GradientView" customModule="rappmovie" customModuleProvider="target">
-                        <rect key="frame" x="0.0" y="257.5" width="375" height="45"/>
+                        <rect key="frame" x="0.0" y="262.5" width="375" height="40"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="45" id="HAh-Cq-Xue"/>
+                            <constraint firstAttribute="height" constant="40" id="HAh-Cq-Xue"/>
                         </constraints>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="color" keyPath="startColor">
-                                <color key="value" red="0.23529411764705882" green="0.23529411764705882" blue="0.23529411764705882" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="value" red="0.19607843137254902" green="0.19607843137254902" blue="0.19607843137254902" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                             </userDefinedRuntimeAttribute>
                             <userDefinedRuntimeAttribute type="color" keyPath="endColor">
-                                <color key="value" red="0.23529411764705882" green="0.23529411764705882" blue="0.23529411764705882" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="value" red="0.19607843137254902" green="0.19607843137254902" blue="0.19607843137254902" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                     </view>
