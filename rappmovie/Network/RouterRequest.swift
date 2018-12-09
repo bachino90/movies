@@ -9,8 +9,6 @@
 import Foundation
 import Alamofire
 
-// MARK: - RouterURLRequestConvertible
-
 protocol RouterRequest: URLConvertible {
     var baseURLString: String { get }
     var method: Alamofire.HTTPMethod { get }
@@ -19,8 +17,6 @@ protocol RouterRequest: URLConvertible {
     var headers: [String: String]? { get }
     var parameters: [String: Any]? { get }
 }
-
-// MARK: - RouterURLRequestConvertible default implementation
 
 extension RouterRequest {
 

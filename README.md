@@ -1,5 +1,7 @@
 # Movies
 
+![GIF](rappmovie.gif)
+
 ## Arquitectura del proyecto
 
 ![Diagram](diagram.png)
@@ -14,11 +16,11 @@ El `APIStore` es responsable de devolver los observables que devuelven informaci
 
 - `APIStore` y `NetworkStore` son reponsables de generar los observables que hacen el request a la API (o devuelven los request cacheados)
 
-- `StateViewModel` y subclases son los responsables de susbcribirse a los observables que devuelve el `APIStore` y transformar la respuesta en un array de `Section` y setear el `state` el cual es observado por el ViewController
+- `StateViewModel` y subclases son los responsables de susbcribirse a los observables que devuelve el `APIStore` y transformar la respuesta en un array de `Section` y setear el `state` el cual es observado por el ViewController. Además son responsables de la "lógica de negocio"
 
 - `Row` representa una celda en un `UITableView` (o `UICollectionView`)
 
-- `Row` representa una sección de celdas en un `UITableView` (o `UICollectionView`). Cada `Section` tiene un array de `Row`
+- `Section` representa una sección de celdas en un `UITableView` (o `UICollectionView`). Cada `Section` tiene un array de `Row`
 
 ## Preguntas
 
