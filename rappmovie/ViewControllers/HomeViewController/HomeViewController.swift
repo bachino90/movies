@@ -28,6 +28,9 @@ class HomeViewController: TableViewController {
         tableView.backgroundColor = Styler.Color.darkGray
         
         tableView.register(MediaCarrouselCell.self)
+        tableView.register(HomeHeaderCell.self)
+
+        tableView.contentInsetAdjustmentBehavior = .never
 
         let _ = viewModel.state.asObservable()
             .observeOn(MainScheduler.instance)
@@ -60,9 +63,9 @@ class HomeViewController: TableViewController {
     }
 }
 
-extension HomeViewController: MediaCarrouselRowDelegate {
+extension HomeViewController: MediaRowDelegate {
 
-    func rowDidRequestToOpen(media: Media) {
+    func actionDidRequesToOpen(media: Media) {
         let vc = MediaViewController(media: media)
         present(vc, animated: true)
     }

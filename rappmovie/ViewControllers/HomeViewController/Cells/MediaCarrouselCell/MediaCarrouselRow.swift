@@ -24,17 +24,13 @@ class MediaCarrouselRow: GenericRow<MediaCarrouselCell> {
         cell.list = mediaCollection
         cell.configure(resource: resource, category: category)
         cell.onSelectItem = { [weak self] media in
-            self?.delegate?.rowDidRequestToOpen(media: media)
+            self?.delegate?.actionDidRequesToOpen(media: media)
         }
     }
 
     override func performAction() {}
 
-    fileprivate var delegate: MediaCarrouselRowDelegate? {
-        return actionDelegate as? MediaCarrouselRowDelegate
+    fileprivate var delegate: MediaRowDelegate? {
+        return actionDelegate as? MediaRowDelegate
     }
-}
-
-protocol MediaCarrouselRowDelegate: ActionDelegate {
-    func rowDidRequestToOpen(media: Media)
 }

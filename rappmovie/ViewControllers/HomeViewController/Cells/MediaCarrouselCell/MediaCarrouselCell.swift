@@ -23,7 +23,7 @@ class MediaCarrouselCell: CarrouselCell<MediaCollectionCell, Media>, TableViewCe
     }
 
     func configure(resource: Media.Resource, category: Media.Category) {
-        titleLabel.text = category.title
+        titleLabel.text = "\(category.title) - \(resource.title)"
     }
     
     override func configure(cell: inout MediaCollectionCell, forItem item: Media) {
