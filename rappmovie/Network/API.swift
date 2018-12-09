@@ -11,26 +11,28 @@ import Alamofire
 
 struct API {
 
+    // FOR v4
+    // eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI0NzFhYzZlYTU3M2VhY2RhMDI5YWIwYTczMzgyZTNhNCIsInN1YiI6IjVjMDcwMzA2YzNhMzY4NjVkYzBkMWQ4YiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.7pg36ESJWyjRQKZcgltJ-AKkh6cXpASc8RSjzCYqMBo
     static let key = "471ac6ea573eacda029ab0a73382e3a4"
     static var locale: String { return Locale.preferredLanguages.first ?? "en-US" }
+    static var basicParams: [String: Any] {
+        return [
+            "api_key": API.key,
+            "language": API.locale
+        ]
+    }
 
     struct ResourceList: RouterRequest {
         let resource: Media.Resource
         let category: Media.Category
         let page: Int
 
-        var baseURLString: String { return "https://api.themoviedb.org/3/" }
-
         var path: String { return "\(resource.rawValue)/\(category.rawValue)" }
 
-        // FOR v4
-        // eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI0NzFhYzZlYTU3M2VhY2RhMDI5YWIwYTczMzgyZTNhNCIsInN1YiI6IjVjMDcwMzA2YzNhMzY4NjVkYzBkMWQ4YiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.7pg36ESJWyjRQKZcgltJ-AKkh6cXpASc8RSjzCYqMBo
         var parameters: [String : Any]? {
-            return [
-                "api_key": API.key,
-                "language": API.locale,
-                "page": page,
-            ]
+            var params = API.basicParams
+            params["page"] = page
+            return params
         }
     }
 
@@ -39,6 +41,8 @@ struct API {
         let id: Int
 
         var path: String { return "\(resource.rawValue)/\(id)" }
+
+        var parameters: [String : Any]? { return API.basicParams }
     }
 
     struct Video: RouterRequest {
@@ -46,6 +50,8 @@ struct API {
         let id: Int
 
         var path: String { return "\(resource.rawValue)/\(id)/videos" }
+
+        var parameters: [String : Any]? { return API.basicParams }
     }
 
     struct Similars: RouterRequest {
@@ -53,12 +59,16 @@ struct API {
         let id: Int
 
         var path: String { return "\(resource.rawValue)/\(id)/similar" }
+
+        var parameters: [String : Any]? { return API.basicParams }
     }
 
     struct Genre: RouterRequest {
         let resource: Media.Resource
 
         var path: String { return "genre/\(resource.rawValue)/list" }
+
+        var parameters: [String : Any]? { return API.basicParams }
     }
 
     struct Search: RouterRequest {
@@ -68,12 +78,10 @@ struct API {
         var path: String { return "search/multi" }
 
         var parameters: [String : Any]? {
-            return [
-                "api_key": API.key,
-                "language": API.locale,
-                "query": query,
-                "page": page,
-            ]
+            var params = API.basicParams
+            params["query"] = query
+            params["page"] = page
+            return params
         }
     }
 }
