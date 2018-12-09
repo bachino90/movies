@@ -26,7 +26,9 @@ El `APIStore` es responsable de devolver los observables que devuelven informaci
 
 #### 1. En qué consiste el principio de responsabilidad única? Cuál es su propósito?
 
-El principio de responsabilidad única describe que cada objeto/módulo/clase es responsable de realizar una única tarea. 
+El principio de responsabilidad única describe que cada objeto/módulo/clase tiene una única razón para cambiar. Es decir que es responsable de un única tarea. 
+
+El propósito de este principio es que el código sea mantenible y escalable.
 
 #### 2. Qué características tiene, según su opinión, un “buen” código o código limpio
 
