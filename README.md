@@ -6,14 +6,14 @@
 
 ![Diagram](diagram.png)
 
-Los ViewController son los responsables de mostrar la información obtenida de los `StateViewModel`. Para ello cada view model tiene un `state`, el cual puede tener los siguientes valores:
+Los `TableViewController` son los responsables de mostrar la información obtenida de los `StateViewModel`. Para ello cada view model tiene un `state`, el cual puede tener los siguientes valores:
 
   - `initial`
   - `loading`
   - `sucess`
   - `error`
 
-Los cambios del `state` son escuchados por los ViewController los cuales saben que presentar en cada caso (`stateHasChanged`).
+Los cambios del `state` son escuchados por los `TableViewController` los cuales saben que presentar en cada caso (`stateHasChanged`).
 
 Los `StateViewModel` son los encargados de hacer los request y estructurarlos en `Section` y `Row` los cuales son utilizados por los `TableViewController` para definir que mostrar.
 
