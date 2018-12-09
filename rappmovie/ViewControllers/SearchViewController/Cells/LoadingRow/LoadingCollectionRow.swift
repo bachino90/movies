@@ -13,6 +13,9 @@ class LoadingCollectionRow: Row {
     override var cellIdentifier: String { return LoadingCollectionCell.defaultReuseIdentifier }
 
     override func willDisplayCell(_ cell: UIView) {
+        if let cell = cell as? LoadingCollectionCell {
+            cell.startAnimating()
+        }
         delegate?.actionDidRequestToLoadMore()
     }
 

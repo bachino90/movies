@@ -10,4 +10,9 @@ import UIKit
 
 class LoadingCollectionCell: UICollectionViewCell {
 
+    @IBOutlet private var activityIndicator: UIActivityIndicatorView!
+
+    func startAnimating() {
+        activityIndicator.startAnimating()
+    }
 }
