@@ -2,7 +2,7 @@
 //  MediaStore.swift
 //  rappmovie
 //
-//  Created by Restorando on 12/4/18.
+//  Created by Emiliano Bivachi on 12/4/18.
 //  Copyright © 2018 BaxLabs. All rights reserved.
 //
 
@@ -59,6 +59,12 @@ class APIStore: NetworkStore {
 
     func getVideo(forResource resource: Media.Resource, forId id: Int) -> Observable<ListOfVideos> {
         return observableRequest(API.Video(resource: resource, id: id))
+    }
+
+    // Similars
+
+    func getSimilars(forResource resource: Media.Resource, forId id: Int) -> Observable<SearchResponse> {
+        return observableRequest(API.Similars(resource: resource, id: id))
     }
 
     // Genres

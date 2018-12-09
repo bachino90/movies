@@ -48,6 +48,13 @@ struct API {
         var path: String { return "\(resource.rawValue)/\(id)/videos" }
     }
 
+    struct Similars: RouterRequest {
+        let resource: Media.Resource
+        let id: Int
+
+        var path: String { return "\(resource.rawValue)/\(id)/similar" }
+    }
+
     struct Genre: RouterRequest {
         let resource: Media.Resource
 
