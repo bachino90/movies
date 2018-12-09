@@ -12,6 +12,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController" customModule="rappmovie" customModuleProvider="target">
             <connections>
+                <outlet property="loadingView" destination="zda-6L-w7A" id="vFm-Hk-FOz"/>
                 <outlet property="tableView" destination="UVb-lo-rSz" id="TF0-cU-VWc"/>
                 <outlet property="view" destination="CHJ-PD-QXG" id="8jl-af-lxh"/>
             </connections>
@@ -26,6 +27,19 @@
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <inset key="scrollIndicatorInsets" minX="0.0" minY="50" maxX="0.0" maxY="0.0"/>
                 </tableView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zda-6L-w7A">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <subviews>
+                        <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="frc-sU-xJh">
+                            <rect key="frame" x="169" y="315" width="37" height="37"/>
+                        </activityIndicatorView>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="frc-sU-xJh" firstAttribute="centerY" secondItem="zda-6L-w7A" secondAttribute="centerY" id="AgT-Ca-MNG"/>
+                        <constraint firstItem="frc-sU-xJh" firstAttribute="centerX" secondItem="zda-6L-w7A" secondAttribute="centerX" id="ZfT-6E-dME"/>
+                    </constraints>
+                </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eMn-h8-NVd">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="70"/>
                     <subviews>
@@ -62,6 +76,8 @@
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
+                <constraint firstItem="zda-6L-w7A" firstAttribute="top" secondItem="CHJ-PD-QXG" secondAttribute="top" id="1N3-Vq-9Ee"/>
+                <constraint firstItem="zda-6L-w7A" firstAttribute="bottom" secondItem="CHJ-PD-QXG" secondAttribute="bottom" id="Bo5-RQ-rWe"/>
                 <constraint firstItem="rDS-8a-S9n" firstAttribute="bottom" secondItem="UVb-lo-rSz" secondAttribute="bottom" id="Cdg-C2-fEt"/>
                 <constraint firstItem="eMn-h8-NVd" firstAttribute="top" secondItem="CHJ-PD-QXG" secondAttribute="top" id="QlA-dd-kxV"/>
                 <constraint firstItem="UVb-lo-rSz" firstAttribute="leading" secondItem="rDS-8a-S9n" secondAttribute="leading" id="SlC-bo-a0Q"/>
@@ -69,6 +85,8 @@
                 <constraint firstItem="eMn-h8-NVd" firstAttribute="leading" secondItem="rDS-8a-S9n" secondAttribute="leading" id="TyK-Ea-seM"/>
                 <constraint firstItem="eMn-h8-NVd" firstAttribute="trailing" secondItem="rDS-8a-S9n" secondAttribute="trailing" id="WEy-as-RGT"/>
                 <constraint firstItem="UVb-lo-rSz" firstAttribute="top" secondItem="CHJ-PD-QXG" secondAttribute="top" id="XIV-wa-tVV"/>
+                <constraint firstItem="zda-6L-w7A" firstAttribute="leading" secondItem="CHJ-PD-QXG" secondAttribute="leading" id="gZ8-GR-MIy"/>
+                <constraint firstItem="zda-6L-w7A" firstAttribute="trailing" secondItem="CHJ-PD-QXG" secondAttribute="trailing" id="nFY-09-qCt"/>
                 <constraint firstItem="rDS-8a-S9n" firstAttribute="trailing" secondItem="UVb-lo-rSz" secondAttribute="trailing" id="xPe-bB-eb8"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="rDS-8a-S9n"/>

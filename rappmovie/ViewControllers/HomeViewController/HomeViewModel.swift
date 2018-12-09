@@ -12,6 +12,7 @@ import RxSwift
 class HomeViewModel: StateViewModel {
 
     func fetchHome() {
+        state.value = .loading
         apiStore.homeObservable()
             .observeOn(MainScheduler.instance)
             .subscribe(onNext: { [weak self] response in

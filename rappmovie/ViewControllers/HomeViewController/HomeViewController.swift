@@ -11,6 +11,8 @@ import RxSwift
 
 class HomeViewController: TableViewController {
 
+    @IBOutlet private var loadingView: UIView!
+
     let viewModel = HomeViewModel()
 
     init() {
@@ -24,6 +26,7 @@ class HomeViewController: TableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        loadingView.backgroundColor = Styler.Color.darkGray
         view.backgroundColor = Styler.Color.darkGray
         tableView.backgroundColor = Styler.Color.darkGray
         
@@ -49,6 +52,11 @@ class HomeViewController: TableViewController {
         case .error: break
         case .success(let sections):
             self.results = sections
+            UIView.animate(withDuration: 0.2, animations: {
+                self.loadingView.alpha = 0
+            }) { completion in
+                self.loadingView.isHidden = true
+            }
         }
     }
 
