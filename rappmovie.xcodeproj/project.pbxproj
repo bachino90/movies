@@ -58,6 +58,12 @@
 		386DA00E21BC4549004985F2 /* VideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 386DA00D21BC4549004985F2 /* VideoViewController.swift */; };
 		386DA01021BC45B7004985F2 /* VideoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 386DA00F21BC45B7004985F2 /* VideoViewController.xib */; };
 		386DA01221BC5653004985F2 /* Comparables.swift in Sources */ = {isa = PBXBuildFile; fileRef = 386DA01121BC5653004985F2 /* Comparables.swift */; };
+		386DA01521BD5298004985F2 /* HomeHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 386DA01421BD5298004985F2 /* HomeHeaderCell.swift */; };
+		386DA01721BD52F8004985F2 /* HomeHeaderRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 386DA01621BD52F8004985F2 /* HomeHeaderRow.swift */; };
+		386DA01921BD5365004985F2 /* HomeHeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 386DA01821BD5365004985F2 /* HomeHeaderCell.xib */; };
+		386DA01D21BD5B81004985F2 /* GrowthFadePresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 386DA01C21BD5B81004985F2 /* GrowthFadePresentationController.swift */; };
+		386DA02021BD5B9D004985F2 /* GrowthFadeAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 386DA01F21BD5B9D004985F2 /* GrowthFadeAnimationController.swift */; };
+		386DA02221BD5BB5004985F2 /* GrowthFadeDismissAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 386DA02121BD5BB5004985F2 /* GrowthFadeDismissAnimationController.swift */; };
 		38CB09AB21B7449B0023514B /* Media.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38CB09AA21B7449B0023514B /* Media.swift */; };
 		38CB09AD21B74AF50023514B /* APIStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38CB09AC21B74AF50023514B /* APIStore.swift */; };
 		38CB09AF21B75A310023514B /* ListOfMovies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38CB09AE21B75A310023514B /* ListOfMovies.swift */; };
@@ -136,6 +142,12 @@
 		386DA00D21BC4549004985F2 /* VideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoViewController.swift; sourceTree = "<group>"; };
 		386DA00F21BC45B7004985F2 /* VideoViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VideoViewController.xib; sourceTree = "<group>"; };
 		386DA01121BC5653004985F2 /* Comparables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comparables.swift; sourceTree = "<group>"; };
+		386DA01421BD5298004985F2 /* HomeHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeHeaderCell.swift; sourceTree = "<group>"; };
+		386DA01621BD52F8004985F2 /* HomeHeaderRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeHeaderRow.swift; sourceTree = "<group>"; };
+		386DA01821BD5365004985F2 /* HomeHeaderCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeHeaderCell.xib; sourceTree = "<group>"; };
+		386DA01C21BD5B81004985F2 /* GrowthFadePresentationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrowthFadePresentationController.swift; sourceTree = "<group>"; };
+		386DA01F21BD5B9D004985F2 /* GrowthFadeAnimationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrowthFadeAnimationController.swift; sourceTree = "<group>"; };
+		386DA02121BD5BB5004985F2 /* GrowthFadeDismissAnimationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrowthFadeDismissAnimationController.swift; sourceTree = "<group>"; };
 		38CB09AA21B7449B0023514B /* Media.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Media.swift; sourceTree = "<group>"; };
 		38CB09AC21B74AF50023514B /* APIStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIStore.swift; sourceTree = "<group>"; };
 		38CB09AE21B75A310023514B /* ListOfMovies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListOfMovies.swift; sourceTree = "<group>"; };
@@ -336,6 +348,34 @@
 			path = VideoViewController;
 			sourceTree = "<group>";
 		};
+		386DA01321BD527B004985F2 /* HomeHeaderCell */ = {
+			isa = PBXGroup;
+			children = (
+				386DA01621BD52F8004985F2 /* HomeHeaderRow.swift */,
+				386DA01421BD5298004985F2 /* HomeHeaderCell.swift */,
+				386DA01821BD5365004985F2 /* HomeHeaderCell.xib */,
+			);
+			path = HomeHeaderCell;
+			sourceTree = "<group>";
+		};
+		386DA01A21BD5B31004985F2 /* Presenters */ = {
+			isa = PBXGroup;
+			children = (
+				386DA01B21BD5B3A004985F2 /* GrowthFade */,
+			);
+			path = Presenters;
+			sourceTree = "<group>";
+		};
+		386DA01B21BD5B3A004985F2 /* GrowthFade */ = {
+			isa = PBXGroup;
+			children = (
+				386DA01C21BD5B81004985F2 /* GrowthFadePresentationController.swift */,
+				386DA01F21BD5B9D004985F2 /* GrowthFadeAnimationController.swift */,
+				386DA02121BD5BB5004985F2 /* GrowthFadeDismissAnimationController.swift */,
+			);
+			path = GrowthFade;
+			sourceTree = "<group>";
+		};
 		38E4E8F721B5FDEA006CC493 = {
 			isa = PBXGroup;
 			children = (
@@ -357,6 +397,7 @@
 		38E4E90221B5FDEA006CC493 /* rappmovie */ = {
 			isa = PBXGroup;
 			children = (
+				386DA01A21BD5B31004985F2 /* Presenters */,
 				38392DFC21B9EF1A00634C94 /* Utils */,
 				38E4E91821B5FF23006CC493 /* ViewControllers */,
 				38E4E91721B5FF13006CC493 /* Models */,
@@ -426,6 +467,7 @@
 			isa = PBXGroup;
 			children = (
 				38392DD721B878DA00634C94 /* MediaSection.swift */,
+				386DA01321BD527B004985F2 /* HomeHeaderCell */,
 				38392DBF21B8426700634C94 /* GenresCarrouselCell */,
 				38392DBE21B8423E00634C94 /* MediaCarrouselCell */,
 			);
@@ -525,6 +567,7 @@
 				386DA00821BC22CB004985F2 /* YouTubeView.xib in Resources */,
 				38392E0D21BA12B800634C94 /* SearchViewController.xib in Resources */,
 				38E4E90B21B5FDEC006CC493 /* Assets.xcassets in Resources */,
+				386DA01921BD5365004985F2 /* HomeHeaderCell.xib in Resources */,
 				38392DC521B842A200634C94 /* GenresCarrouselCell.xib in Resources */,
 				38CB09B521B76E540023514B /* HomeViewController.xib in Resources */,
 				38392DF121B953CB00634C94 /* MediaHeaderCell.xib in Resources */,
@@ -604,6 +647,8 @@
 				386DA00E21BC4549004985F2 /* VideoViewController.swift in Sources */,
 				38392DBB21B8237D00634C94 /* Genre.swift in Sources */,
 				38392DC321B8428B00634C94 /* GenresCarrouselRow.swift in Sources */,
+				386DA01D21BD5B81004985F2 /* GrowthFadePresentationController.swift in Sources */,
+				386DA01721BD52F8004985F2 /* HomeHeaderRow.swift in Sources */,
 				38392DF521B953EC00634C94 /* MediaOverviewRow.swift in Sources */,
 				38392DF321B953DB00634C94 /* MediaHeaderRow.swift in Sources */,
 				38CB09AF21B75A310023514B /* ListOfMovies.swift in Sources */,
@@ -627,6 +672,7 @@
 				38E4E90621B5FDEA006CC493 /* ViewController.swift in Sources */,
 				38392E0221B9F9FB00634C94 /* MediaVideoRow.swift in Sources */,
 				38CB09B121B75A400023514B /* ListOfTVShows.swift in Sources */,
+				386DA02021BD5B9D004985F2 /* GrowthFadeAnimationController.swift in Sources */,
 				38392DEF21B953C400634C94 /* MediaHeaderCell.swift in Sources */,
 				38392DDE21B889E500634C94 /* HomeResponse.swift in Sources */,
 				38392DE521B8B2C300634C94 /* MediaViewModel.swift in Sources */,
@@ -637,12 +683,14 @@
 				38E4E92721B62293006CC493 /* HomeViewController.swift in Sources */,
 				38392DCB21B842F200634C94 /* MediaCarrouselRow.swift in Sources */,
 				38E4E92F21B62389006CC493 /* CellProtocols.swift in Sources */,
+				386DA02221BD5BB5004985F2 /* GrowthFadeDismissAnimationController.swift in Sources */,
 				38E4E90421B5FDEA006CC493 /* AppDelegate.swift in Sources */,
 				38392DBD21B8245500634C94 /* ListOfGenres.swift in Sources */,
 				38392E1821BAAFB600634C94 /* MediaRow.swift in Sources */,
 				386DA00B21BC314D004985F2 /* MediaVideosSection.swift in Sources */,
 				38392DFB21B9EEAA00634C94 /* MediaOverviewCell.swift in Sources */,
 				38CB09AD21B74AF50023514B /* APIStore.swift in Sources */,
+				386DA01521BD5298004985F2 /* HomeHeaderCell.swift in Sources */,
 				38392E0B21BA12AB00634C94 /* SearchViewController.swift in Sources */,
 				38E4E92121B6002C006CC493 /* ResponseModel.swift in Sources */,
 				38CB09B321B76E490023514B /* HomeViewModel.swift in Sources */,
