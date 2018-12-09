@@ -220,7 +220,7 @@
 			path = GenresCarrouselCell;
 			sourceTree = "<group>";
 		};
-		38392DD421B872DC00634C94 /* Generics */ = {
+		38392DD421B872DC00634C94 /* Common */ = {
 			isa = PBXGroup;
 			children = (
 				386D9FFC21BB34D3004985F2 /* LoadingCollectionRow */,
@@ -233,7 +233,7 @@
 				38E4E93021B62415006CC493 /* ReusableCell.swift */,
 				38392DD521B872F000634C94 /* CarrouselCell.swift */,
 			);
-			path = Generics;
+			path = Common;
 			sourceTree = "<group>";
 		};
 		38392DDF21B8B22600634C94 /* MediaViewController */ = {
@@ -470,7 +470,7 @@
 		38E4E91821B5FF23006CC493 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				38392DD421B872DC00634C94 /* Generics */,
+				38392DD421B872DC00634C94 /* Common */,
 				38E4E93321B624C7006CC493 /* HomeViewController */,
 				38392E0921BA129700634C94 /* SearchViewController */,
 				38392DDF21B8B22600634C94 /* MediaViewController */,
