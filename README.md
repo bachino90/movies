@@ -50,5 +50,6 @@ El propósito de este principio es que el código sea mantenible y escalable.
 Un codigo limpio es aquel que
 
 - Las responsabilidades de las clases están claramente definidas y no se superponen
-- Define nombres claros para las clases, metodos y variables
+- Mantiene un bajo acomplamiento entre las clases
+- Define nombres claros para las clases, métodos y variables
 - Respeta el mismo styling del código (sirve usar lint para esto)
