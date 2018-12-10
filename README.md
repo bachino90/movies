@@ -41,9 +41,11 @@ El `APIStore` es responsable de devolver los observables que hacen el request a 
 
 #### 1. En qué consiste el principio de responsabilidad única? Cuál es su propósito?
 
-El principio de responsabilidad única describe que cada objeto/módulo/clase tiene una única razón para cambiar. Es decir que es responsable de un única tarea. 
+Técnicamente hablando el principio de responsabilidad única describe que cada objeto/módulo/clase tiene una única razón para cambiar. Es decir que es responsable de un única tarea.
 
-El propósito de este principio es que el código sea mantenible y escalable.
+El propósito de este principio es encapsular funcionalidades que estén relacionadas entre sí en una misma clase/módulo. Otro aspecto importante que sale del principio es tratar de disminuir el acoplamiento entre clases lo mayor posible, que los modulos dependan muy poco entre sí. Si los modulos se vuelven muy dependientes a medida que vayan surgiendo cambios en alguno, el resto de los módulos también se tendrán que actualizar de acuerdo a estos cambios. En cambio desarrollando módulos independientes estas actualizaciones deberían reducirse al mínimo.
+
+Todo estos aspectos hacen que el código sea escalable y mantenible. Reduce el riesgo de que alguna modificación a una clase/módulo genre un bug en otra clase/módulo y por otro lado 
 
 #### 2. Qué características tiene, según su opinión, un “buen” código o código limpio
 
@@ -52,4 +54,4 @@ Un codigo limpio es aquel que
 - Las responsabilidades de las clases están claramente definidas y no se superponen
 - Mantiene un bajo acomplamiento entre las clases
 - Define nombres claros para las clases, métodos y variables
-- Respeta el mismo styling del código (sirve usar lint para esto)
+- Respeta el mismo styling del código
