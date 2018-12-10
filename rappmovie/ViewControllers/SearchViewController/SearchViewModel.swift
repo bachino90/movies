@@ -20,7 +20,9 @@ class SearchViewModel: StateViewModel {
             if (query?.count ?? 0) > 1 {
                 state.value = .success([SearchResultsSection(listOfMedia: [], loadMore: true)])
             }
-            search()
+            if query != oldValue {
+                search()
+            }
         }
     }
 
