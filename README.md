@@ -45,7 +45,7 @@ Técnicamente hablando el principio de responsabilidad única describe que cada 
 
 El propósito de este principio es encapsular funcionalidades que estén relacionadas entre sí en una misma clase/módulo. Otro aspecto importante que sale del principio es tratar de disminuir el acoplamiento entre clases lo mayor posible, que los modulos dependan muy poco entre sí. Si los modulos se vuelven muy dependientes a medida que vayan surgiendo cambios en alguno, el resto de los módulos también se tendrán que actualizar de acuerdo a estos cambios. En cambio desarrollando módulos independientes estas actualizaciones deberían reducirse al mínimo.
 
-Todo estos aspectos hacen que el código sea escalable y mantenible. Reduce el riesgo de que alguna modificación a una clase/módulo genre un bug en otra clase/módulo y por otro lado 
+Todo estos aspectos hacen que el código sea escalable y mantenible, y reduce el riesgo de que alguna modificación a una clase/módulo genere un bug en otra clase/módulo, haciendo más escalable el desarrollo de una aplicación por parte de un equipo formado por varias personas.
 
 #### 2. Qué características tiene, según su opinión, un “buen” código o código limpio
 
