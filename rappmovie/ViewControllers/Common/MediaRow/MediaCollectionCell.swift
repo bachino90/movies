@@ -51,4 +51,11 @@ class MediaCollectionCell: UICollectionViewCell {
         }
         releaseDateLabel.text = releaseDateLabel.text?.uppercased()
     }
+
+    override func prepareForReuse() {
+        super.prepareForReuse()
+
+        imageView.af_cancelImageRequest()
+        imageView.image = nil
+    }
 }
