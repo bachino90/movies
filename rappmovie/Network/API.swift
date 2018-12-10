@@ -51,7 +51,7 @@ struct API {
 
         var path: String { return "\(resource.rawValue)/\(id)/videos" }
 
-        var parameters: [String : Any]? { return API.basicParams }
+        var parameters: [String : Any]? { return ["api_key": API.key] }
     }
 
     struct Similars: RouterRequest {
